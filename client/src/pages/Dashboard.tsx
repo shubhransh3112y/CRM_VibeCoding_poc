@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 import axios from 'axios'
-import { Paper, Grid, Typography, Table, TableHead, TableRow, TableCell, TableBody, Chip, Button, Dialog, DialogTitle, DialogContent, DialogActions, TableSortLabel } from '@mui/material'
+import { Paper, Grid, Typography, Table, TableHead, TableRow, TableCell, TableBody, Chip, Button, Dialog, DialogTitle, DialogContent, DialogActions, TableSortLabel, Box } from '@mui/material'
 import { useAuth } from '../context/AuthContext'
 import StatusUpdateDialog from '../components/StatusUpdateDialog'
 import TableFilters, { Column } from '../components/TableFilters'
