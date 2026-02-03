@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "email": "admin@example.com",
+      "password": "adminpass",
+      "name": "Admin User",
+      "role": "admin"
+    },
+    {
+      "id": "u2",
+      "email": "manager@example.com",
+      "password": "managerpass",
+      "name": "Manager User",
+      "role": "manager"
+    },
+    {
+      "id": "u3",
+      "email": "user@example.com",
+      "password": "userpass",
+      "name": "Regular User",
+      "role": "user"
+    },
+    {
+      "id": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "email": "shubhransh46@gmail.com",
+      "password": "shubh123",
+      "name": "shubhransh Yadav",
+      "role": "user"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "title": "Design landing page",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-02-10",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "leadId": "l2",
+      "reason": "Check the evidence of the failed cleint",
+      "attachment": {
+        "filename": "login.jpeg",
+        "url": "/uploads/1770155621087-login.jpeg",
+        "mime": "image/jpeg"
+      }
+    },
+    {
+      "id": "t2",
+      "title": "Fix login bug",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-02-05",
+      "assignedTo": "u2"
+    },
+    {
+      "id": "t3",
+      "title": "Release v1.0",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-01-20",
+      "assignedTo": "u1",
+      "reason": ""
+    },
+    {
+      "id": "34b452fa-ae8b-4ed5-b617-dc10b453fea1",
+      "title": "Task 1",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-02-28",
+      "assignedTo": "10"
+    },
+    {
+      "id": "816801d9-27cb-473f-8ba7-6da90d398d5e",
+      "title": "Check the New Lead",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-02-06",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "description": "Check the LEAD AND contact him for update",
+      "leadId": "l1",
+      "reason": "Client ask for lower quote amout\n"
+    }
+  ],
+  "leads": [
+    {
+      "id": "l1",
+      "name": "Alice Smith",
+      "email": "alice@example.com",
+      "phone": "1234567890",
+      "stage": "new",
+      "owner": "u2"
+    },
+    {
+      "id": "l2",
+      "name": "Bob Jones",
+      "email": "bob@example.com",
+      "phone": "0987654321",
+      "stage": "contacted",
+      "owner": "u3"
+    }
+  ]
+}
