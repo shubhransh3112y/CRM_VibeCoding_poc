@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 import axios from 'axios'
-import { Paper, Grid, Typography, Table, TableHead, TableRow, TableCell, TableBody, Chip, Button, Dialog, DialogTitle, DialogContent, DialogActions, TableSortLabel, Box } from '@mui/material'
+import { Paper, Grid, Typography, Table, TableHead, TableRow, TableCell, TableBody, Chip, Button, Dialog, DialogTitle, DialogContent, DialogActions, TableSortLabel, Box, TextField } from '@mui/material'
 import { useAuth } from '../context/AuthContext'
 import StatusUpdateDialog from '../components/StatusUpdateDialog'
 import TableFilters, { Column } from '../components/TableFilters'
@@ -36,6 +36,9 @@ export default function Dashboard() {
   const { data: leads = [] } = useLeads()
   const { data: users = [] } = useUsers()
   const { user } = useAuth()
+  const [activityOpen, setActivityOpen] = useState(false)
+  const [activityItems, setActivityItems] = useState<any[]>([])
+  const [searchQuery, setSearchQuery] = useState('')
 
   const [statusOpen, setStatusOpen] = useState(false)
   const [selectedTaskId, setSelectedTaskId] = useState<string | null>(null)
@@ -58,6 +61,7 @@ export default function Dashboard() {
     { key: 'dueDate', label: 'Due', type: 'date-range' },
     { key: 'assignedTo', label: 'Assigned To', type: 'text' },
     { key: 'attachment', label: 'Attachment', type: 'text' },
+    { key: 'tags', label: 'Tags', type: 'text' },
   ]
 
   const matchesFilters = (task: any, allFilters: any) => {
@@ -85,17 +89,36 @@ export default function Dashboard() {
         return filterValue.length === 0 || filterValue.includes(taskValue)
       }
 
+      if (Array.isArray(taskValue)) {
+        const v1 = taskValue.join(', ')
+        const v2 = filterValue == null ? '' : String(filterValue)
+        return v1.toLowerCase().includes(v2.toLowerCase())
+      }
+
       const v1 = taskValue && typeof taskValue === 'object' ? (taskValue.filename || taskValue.name || '') : (taskValue == null ? '' : String(taskValue))
       const v2 = filterValue == null ? '' : String(filterValue)
       return v1.toLowerCase().includes(v2.toLowerCase())
     })
   }
 
-  const filteredTasks = Array.isArray(tasks) ? tasks.filter((t: any) => matchesFilters(t, filters)) : []
+  const filteredTasks = Array.isArray(tasks) ? tasks.filter((t: any) => {
+    if (searchQuery.trim()) {
+      const hay = [t.title, t.description, t.reason, ...(t.tags || [])]
+        .map(v => String(v || '').toLowerCase())
+        .join(' ')
+      if (!hay.includes(searchQuery.toLowerCase())) return false
+    }
+    return matchesFilters(t, filters)
+  }) : []
+  const openActivityDialog = (activity: any[]) => {
+    setActivityItems(activity || [])
+    setActivityOpen(true)
+  }
 
   const getComparable = (row: any, key: string) => {
     if (key === 'dueDate') return row?.dueDate ? new Date(row.dueDate).getTime() : 0
     if (key === 'attachment') return (row?.attachment?.filename || row?.attachment?.name || '').toString().toLowerCase()
+    if (key === 'tags') return (row?.tags || []).join(', ').toLowerCase()
     const raw = row?.[key]
     if (raw && typeof raw === 'object') return (raw.filename || raw.name || '').toString().toLowerCase()
     return (raw ?? '').toString().toLowerCase()
@@ -125,6 +148,16 @@ export default function Dashboard() {
   }
 
   const attachmentUrl = attachment?.url ? (attachment.url.startsWith('http') ? attachment.url : API + attachment.url) : ''
+
+  const { data: summary } = useQuery(['dashboard-summary'], async () => {
+    const res = await axios.get(API + '/dashboard/summary', { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    return res.data
+  })
+
+  const { data: searchResults } = useQuery(['search', searchQuery], async () => {
+    const res = await axios.get(API + '/search', { params: { q: searchQuery }, headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+    return res.data
+  }, { enabled: searchQuery.trim().length >= 2 })
 
   const statusMap = tasks.reduce((acc: any, t: any) => { acc[t.status] = (acc[t.status] || 0) + 1; return acc }, {})
   const tasksByStatus = Object.entries(statusMap).map(([name, value]) => ({ name, value }))
@@ -166,6 +199,60 @@ export default function Dashboard() {
       </Grid>
 
       <Grid item xs={12}>
+        <Paper sx={{ p: 2 }}>
+          <Typography variant="h6" sx={{ mb: 1 }}>Overview</Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3}>
+              <Paper sx={{ p: 2, bgcolor: '#e3f2fd' }}>
+                <Typography variant="caption">Total Tasks</Typography>
+                <Typography variant="h6">{summary?.totalTasks ?? tasks.length}</Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Paper sx={{ p: 2, bgcolor: '#fff3e0' }}>
+                <Typography variant="caption">Overdue Tasks</Typography>
+                <Typography variant="h6">{summary?.overdueTasks ?? 0}</Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Paper sx={{ p: 2, bgcolor: '#e8f5e9' }}>
+                <Typography variant="caption">Total Leads</Typography>
+                <Typography variant="h6">{summary?.totalLeads ?? leads.length}</Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper sx={{ p: 2 }}>
+          <Typography variant="h6" sx={{ mb: 1 }}>Global Search</Typography>
+          <TextField
+            fullWidth
+            placeholder="Search tasks, leads, users..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          {searchResults && (
+            <Box sx={{ mt: 2 }}>
+              <Typography variant="subtitle2">Tasks</Typography>
+              {(searchResults.tasks || []).slice(0, 5).map((t: any) => (
+                <Typography key={t.id} variant="body2">• {t.title}</Typography>
+              ))}
+              <Typography variant="subtitle2" sx={{ mt: 1 }}>Leads</Typography>
+              {(searchResults.leads || []).slice(0, 5).map((l: any) => (
+                <Typography key={l.id} variant="body2">• {l.name}</Typography>
+              ))}
+              <Typography variant="subtitle2" sx={{ mt: 1 }}>Users</Typography>
+              {(searchResults.users || []).slice(0, 5).map((u: any) => (
+                <Typography key={u.id} variant="body2">• {u.name || u.email}</Typography>
+              ))}
+            </Box>
+          )}
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
         <Paper sx={{ p: 2, mt: 2 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
             <Typography variant="h6">Tasks</Typography>
@@ -193,11 +280,15 @@ export default function Dashboard() {
                   <TableSortLabel active={sortKey === 'assignedTo'} direction={sortKey === 'assignedTo' ? sortDir : 'asc'} onClick={() => handleSort('assignedTo')}>Assigned To</TableSortLabel>
                 </TableCell>
                 <TableCell sx={{ fontWeight: 700, fontSize: '0.95rem' }}>
+                  <TableSortLabel active={sortKey === 'tags'} direction={sortKey === 'tags' ? sortDir : 'asc'} onClick={() => handleSort('tags')}>Tags</TableSortLabel>
+                </TableCell>
+                <TableCell sx={{ fontWeight: 700, fontSize: '0.95rem' }}>
                   <TableSortLabel active={sortKey === 'reason'} direction={sortKey === 'reason' ? sortDir : 'asc'} onClick={() => handleSort('reason')}>Failed Reason</TableSortLabel>
                 </TableCell>
                 <TableCell sx={{ fontWeight: 700, fontSize: '0.95rem' }}>
                   <TableSortLabel active={sortKey === 'attachment'} direction={sortKey === 'attachment' ? sortDir : 'asc'} onClick={() => handleSort('attachment')}>Attachment</TableSortLabel>
                 </TableCell>
+                <TableCell sx={{ fontWeight: 700, fontSize: '0.95rem' }}>Activity</TableCell>
                 {user && user.role !== 'admin' && <TableCell sx={{ fontWeight: 700, fontSize: '0.95rem' }}>Update</TableCell>}
               </TableRow>
               {showFilters && <TableFilters columns={columns} filters={filters} onChange={setFilters} />}
@@ -217,10 +308,20 @@ export default function Dashboard() {
                   </TableCell>
                   <TableCell>{t.dueDate}</TableCell>
                   <TableCell>{t.assignedTo ? (userMap[t.assignedTo] || t.assignedTo) : 'Unassigned'}</TableCell>
+                  <TableCell>
+                    {(t.tags || []).length ? (t.tags || []).map((tag: string) => <Chip key={tag} label={tag} size="small" sx={{ mr: 0.5 }} />) : '--'}
+                  </TableCell>
                   <TableCell>{t.status === 'failed' && t.reason ? t.reason : ''}</TableCell>
                   <TableCell>
                     {t.attachment ? (
                       <Button size="small" onClick={() => openAttachmentDialog(t.attachment)}>{t.attachment.filename || t.attachment.name || 'Attachment'}</Button>
+                    ) : (
+                      '--'
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    {t.activity?.length ? (
+                      <Button size="small" onClick={() => openActivityDialog(t.activity)}>View</Button>
                     ) : (
                       '--'
                     )}
@@ -260,6 +361,24 @@ export default function Dashboard() {
               <Button component="a" href={attachmentUrl} download>Download</Button>
             </>
           )}
+        </DialogActions>
+      </Dialog>
+      <Dialog open={activityOpen} onClose={() => setActivityOpen(false)} fullWidth maxWidth="sm">
+        <DialogTitle>Activity</DialogTitle>
+        <DialogContent>
+          {activityItems.length === 0 ? (
+            <Typography variant="body2">No activity yet.</Typography>
+          ) : (
+            activityItems.slice().reverse().map((a: any) => (
+              <Box key={a.id} sx={{ mb: 1 }}>
+                <Typography variant="body2"><strong>{a.action}</strong> — {a.summary}</Typography>
+                <Typography variant="caption" color="text.secondary">{a.at}</Typography>
+              </Box>
+            ))
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setActivityOpen(false)}>Close</Button>
         </DialogActions>
       </Dialog>
     </Grid>

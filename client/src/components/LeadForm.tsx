@@ -6,7 +6,7 @@ import axios from 'axios'
 const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000'
 
 export default function LeadForm({ open, onClose, initial }: any) {
-  const { control, handleSubmit, reset } = useForm({ defaultValues: initial || { name: '', email: '', phone: '', stage: 'new', owner: '' } })
+  const { control, handleSubmit, reset } = useForm({ defaultValues: initial || { name: '', email: '', phone: '', stage: 'new', owner: '', tags: '' } })
   const [users, setUsers] = useState<any[]>([])
 
   useEffect(() => {
@@ -15,11 +15,19 @@ export default function LeadForm({ open, onClose, initial }: any) {
       .catch(() => setUsers([]))
   }, [])
 
-  useEffect(() => { reset(initial || { name: '', email: '', phone: '', stage: 'new', owner: '' }) }, [initial, reset])
+  useEffect(() => {
+    const seed = initial ? { ...initial, tags: (initial.tags || []).join(', ') } : { name: '', email: '', phone: '', stage: 'new', owner: '', tags: '' }
+    reset(seed)
+  }, [initial, reset])
 
   const onSubmit = async (data: any) => {
     try {
-      await axios.post(API + '/leads', data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+      const payload = { ...data, tags: data.tags }
+      if (initial) {
+        await axios.put(API + '/leads/' + initial.id, payload, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+      } else {
+        await axios.post(API + '/leads', payload, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+      }
       onClose()
     } catch (err: any) {
       alert(err?.response?.data?.message || 'Error')
@@ -47,6 +55,9 @@ export default function LeadForm({ open, onClose, initial }: any) {
             <MenuItem value="">Unassigned</MenuItem>
             {users.map(u => <MenuItem key={u.id} value={u.id}>{u.name || u.email}</MenuItem>)}
           </TextField>
+        )} />
+        <Controller name="tags" control={control} render={({ field }) => (
+          <TextField {...field} label="Tags (comma separated)" fullWidth margin="normal" />
         )} />
       </DialogContent>
       <DialogActions>

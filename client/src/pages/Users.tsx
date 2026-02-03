@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
-import { Paper, Typography, Table, TableHead, TableRow, TableCell, TableBody, Button, IconButton, Box, TableSortLabel } from '@mui/material'
+import { Paper, Typography, Table, TableHead, TableRow, TableCell, TableBody, Button, IconButton, Box, TableSortLabel, TextField } from '@mui/material'
 import TableFilters, { Column } from '../components/TableFilters'
 import EditIcon from '@mui/icons-material/Edit'
 import UserForm from '../components/UserForm'
@@ -16,6 +16,7 @@ export default function Users() {
   const [showFilters, setShowFilters] = useState(false)
   const [sortKey, setSortKey] = useState('name')
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc')
+  const [searchQuery, setSearchQuery] = useState('')
   const columns: Column[] = [
     { key: 'name', label: 'Name', type: 'text' },
     { key: 'email', label: 'Email', type: 'text' },
@@ -27,12 +28,18 @@ export default function Users() {
     return res.data
   })
 
-  const filteredUsers = (users || []).filter((u: any) => columns.every((c) => {
+  const filteredUsers = (users || []).filter((u: any) => {
+    if (searchQuery.trim()) {
+      const hay = [u.name, u.email, u.role].map(v => String(v || '').toLowerCase()).join(' ')
+      if (!hay.includes(searchQuery.toLowerCase())) return false
+    }
+    return columns.every((c) => {
     const v = filters[c.key]
     if (!v) return true
     const val = u[c.key]
     return (val ?? '').toString().toLowerCase().includes(String(v).toLowerCase())
-  }))
+    })
+  })
 
   const sortedUsers = [...filteredUsers].sort((a: any, b: any) => {
     if (!sortKey) return 0
@@ -58,7 +65,13 @@ export default function Users() {
     <Paper sx={{ p: 2 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Typography variant="h6">Users</Typography>
-        <Box sx={{ display: 'flex', gap: 1 }}>
+        <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+          <TextField
+            size="small"
+            placeholder="Search users..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
           <Button variant="outlined" onClick={() => setShowFilters((s) => !s)}>{showFilters ? 'Hide Filters' : 'Show Filters'}</Button>
           <Button variant="contained" color="primary" onClick={() => { setEditing(null); setOpen(true) }} aria-label="New User">New User</Button>
         </Box>

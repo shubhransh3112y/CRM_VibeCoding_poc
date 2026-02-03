@@ -6,7 +6,7 @@ import axios from 'axios'
 const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000'
 
 export default function TaskForm({ open, onClose, initial }: any) {
-  const { control, handleSubmit, reset, watch } = useForm({ defaultValues: initial || { title: '', status: 'todo', priority: 'medium', dueDate: '', assignedTo: '', leadId: '', description: '' } })
+  const { control, handleSubmit, reset, watch } = useForm({ defaultValues: initial || { title: '', status: 'todo', priority: 'medium', dueDate: '', assignedTo: '', leadId: '', description: '', tags: '' } })
   const [users, setUsers] = useState<any[]>([])
   const [leads, setLeads] = useState<any[]>([])
 
@@ -19,17 +19,21 @@ export default function TaskForm({ open, onClose, initial }: any) {
       .catch(() => setLeads([]))
   }, [])
 
-  useEffect(() => { reset(initial || { title: '', status: 'todo', priority: 'medium', dueDate: '', assignedTo: '', leadId: '', description: '' }) }, [initial, reset])
+  useEffect(() => {
+    const seed = initial ? { ...initial, tags: (initial.tags || []).join(', ') } : { title: '', status: 'todo', priority: 'medium', dueDate: '', assignedTo: '', leadId: '', description: '', tags: '' }
+    reset(seed)
+  }, [initial, reset])
 
   const selectedLeadId = watch('leadId')
   const selectedLead = leads.find(l => l.id === selectedLeadId)
 
   const onSubmit = async (data: any) => {
     try {
+      const payload = { ...data, tags: data.tags }
       if (initial) {
-        await axios.put(API + '/tasks/' + initial.id, data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        await axios.put(API + '/tasks/' + initial.id, payload, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       } else {
-        await axios.post(API + '/tasks', data, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
+        await axios.post(API + '/tasks', payload, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } })
       }
       onClose()
     } catch (err: any) {
@@ -63,6 +67,9 @@ export default function TaskForm({ open, onClose, initial }: any) {
             <MenuItem value="">Unassigned</MenuItem>
             {users.map(u => <MenuItem key={u.id} value={u.id}>{u.name || u.email}</MenuItem>)}
           </TextField>
+        )} />
+        <Controller name="tags" control={control} render={({ field }) => (
+          <TextField {...field} label="Tags (comma separated)" fullWidth margin="normal" />
         )} />
 
         <Controller name="leadId" control={control} render={({ field }) => (

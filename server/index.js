@@ -48,6 +48,94 @@ function writeDb(db) {
   fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
 }
 
+function toArrayTags(val) {
+  if (!val) return [];
+  if (Array.isArray(val)) return val.map(String).map(t => t.trim()).filter(Boolean);
+  return String(val).split(',').map(t => t.trim()).filter(Boolean);
+}
+
+function applyTaskFilters(items, query) {
+  const q = (query.q || '').toLowerCase();
+  const status = (query.status || '').toLowerCase();
+  const priority = (query.priority || '').toLowerCase();
+  const assignedTo = (query.assignedTo || '').toLowerCase();
+  const title = (query.title || '').toLowerCase();
+  const dueFrom = query.dueFrom ? new Date(query.dueFrom) : null;
+  const dueTo = query.dueTo ? new Date(query.dueTo) : null;
+  const tag = (query.tag || '').toLowerCase();
+
+  return items.filter(t => {
+    if (status && String(t.status || '').toLowerCase() !== status) return false;
+    if (priority && String(t.priority || '').toLowerCase() !== priority) return false;
+    if (assignedTo && String(t.assignedTo || '').toLowerCase() !== assignedTo) return false;
+    if (title && !String(t.title || '').toLowerCase().includes(title)) return false;
+    if (tag) {
+      const tags = (t.tags || []).map(x => String(x).toLowerCase());
+      if (!tags.includes(tag)) return false;
+    }
+    if (dueFrom || dueTo) {
+      if (!t.dueDate) return false;
+      const d = new Date(t.dueDate);
+      if (dueFrom && d < dueFrom) return false;
+      if (dueTo && d > dueTo) return false;
+    }
+    if (q) {
+      const hay = [t.title, t.description, t.reason, t.assignedTo, ...(t.tags || [])]
+        .map(v => String(v || '').toLowerCase())
+        .join(' ');
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function applyLeadFilters(items, query) {
+  const q = (query.q || '').toLowerCase();
+  const stage = (query.stage || '').toLowerCase();
+  const owner = (query.owner || '').toLowerCase();
+  const tag = (query.tag || '').toLowerCase();
+  return items.filter(l => {
+    if (stage && String(l.stage || '').toLowerCase() !== stage) return false;
+    if (owner && String(l.owner || '').toLowerCase() !== owner) return false;
+    if (tag) {
+      const tags = (l.tags || []).map(x => String(x).toLowerCase());
+      if (!tags.includes(tag)) return false;
+    }
+    if (q) {
+      const hay = [l.name, l.email, l.phone, l.owner, ...(l.tags || [])]
+        .map(v => String(v || '').toLowerCase())
+        .join(' ');
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function applySort(items, sortBy, sortDir) {
+  if (!sortBy) return items;
+  const dir = String(sortDir || 'asc').toLowerCase() === 'desc' ? -1 : 1;
+  return [...items].sort((a, b) => {
+    const av = a?.[sortBy];
+    const bv = b?.[sortBy];
+    if (sortBy === 'dueDate') {
+      const ad = av ? new Date(av).getTime() : 0;
+      const bd = bv ? new Date(bv).getTime() : 0;
+      return ad < bd ? -1 * dir : ad > bd ? 1 * dir : 0;
+    }
+    const as = (av == null ? '' : String(av)).toLowerCase();
+    const bs = (bv == null ? '' : String(bv)).toLowerCase();
+    return as < bs ? -1 * dir : as > bs ? 1 * dir : 0;
+  });
+}
+
+function paginate(items, query) {
+  const page = Math.max(1, parseInt(query.page || '1', 10));
+  const pageSize = Math.max(1, parseInt(query.pageSize || '10', 10));
+  const start = (page - 1) * pageSize;
+  const end = start + pageSize;
+  return { page, pageSize, total: items.length, items: items.slice(start, end) };
+}
+
 function authMiddleware(req, res, next) {
   const auth = req.headers.authorization;
   if (!auth) return res.status(401).json({ message: 'No token' });
@@ -82,6 +170,11 @@ app.get('/tasks', authMiddleware, (req, res) => {
   if (user.role === 'user') {
     tasks = tasks.filter(t => t.assignedTo === user.id);
   }
+  tasks = applyTaskFilters(tasks, req.query);
+  tasks = applySort(tasks, req.query.sortBy, req.query.sortDir);
+  if (req.query.page || req.query.pageSize) {
+    return res.json(paginate(tasks, req.query));
+  }
   res.json(tasks);
 });
 
@@ -89,9 +182,23 @@ app.post('/tasks', authMiddleware, (req, res) => {
   const db = readDb();
   const user = req.user;
   if (user.role === 'user') return res.status(403).json({ message: 'Only admin/manager can create tasks' });
-  const { title, status, priority, dueDate, assignedTo } = req.body;
+  const { title, status, priority, dueDate, assignedTo, tags, description, leadId } = req.body;
   if (!title) return res.status(400).json({ message: 'Title required' });
-  const task = { id: uuidv4(), title, status: status || 'todo', priority: priority || 'medium', dueDate: dueDate || null, assignedTo };
+  const now = new Date().toISOString();
+  const task = {
+    id: uuidv4(),
+    title,
+    status: status || 'todo',
+    priority: priority || 'medium',
+    dueDate: dueDate || null,
+    assignedTo,
+    description: description || '',
+    leadId: leadId || null,
+    tags: toArrayTags(tags),
+    activity: [
+      { id: uuidv4(), at: now, by: user.id, action: 'created', summary: `Task created by ${user.email}` }
+    ]
+  };
   db.tasks.push(task);
   writeDb(db);
 
@@ -125,11 +232,20 @@ app.put('/tasks/:id', authMiddleware, upload.single('attachment'), (req, res) =>
     };
   }
 
+  if (updates.tags) {
+    updates.tags = toArrayTags(updates.tags);
+  }
+
   if (updates.status === 'failed' && !req.file && !task.attachment) {
     return res.status(400).json({ message: 'Evidence attachment is required when marking failed' });
   }
 
-  db.tasks[idx] = { ...task, ...updates };
+  const now = new Date().toISOString();
+  const activity = task.activity || [];
+  const summary = updates.status ? `Status changed to ${updates.status}` : 'Task updated';
+  activity.push({ id: uuidv4(), at: now, by: user.id, action: 'updated', summary });
+
+  db.tasks[idx] = { ...task, ...updates, activity };
   writeDb(db);
   res.json(db.tasks[idx]);
 });
@@ -147,22 +263,69 @@ app.delete('/tasks/:id', authMiddleware, (req, res) => {
   res.json({ message: 'Deleted' });
 });
 
+app.get('/tasks/:id/activity', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  const { id } = req.params;
+  const task = db.tasks.find(t => t.id === id);
+  if (!task) return res.status(404).json({ message: 'Not found' });
+  if (user.role === 'user' && task.assignedTo !== user.id) return res.status(403).json({ message: 'Forbidden' });
+  res.json(task.activity || []);
+});
+
 // Leads
 app.get('/leads', authMiddleware, (req, res) => {
   const db = readDb();
   const { stage } = req.query;
   let leads = db.leads;
   if (stage) leads = leads.filter(l => l.stage === stage);
+  leads = applyLeadFilters(leads, req.query);
+  leads = applySort(leads, req.query.sortBy, req.query.sortDir);
+  if (req.query.page || req.query.pageSize) {
+    return res.json(paginate(leads, req.query));
+  }
   res.json(leads);
 });
 
 app.post('/leads', authMiddleware, (req, res) => {
   const db = readDb();
-  const { name, email, phone, stage, owner } = req.body;
-  const lead = { id: uuidv4(), name, email, phone, stage: stage || 'new', owner };
+  const { name, email, phone, stage, owner, tags } = req.body;
+  const now = new Date().toISOString();
+  const lead = {
+    id: uuidv4(),
+    name, email, phone,
+    stage: stage || 'new',
+    owner,
+    tags: toArrayTags(tags),
+    activity: [{ id: uuidv4(), at: now, by: req.user.id, action: 'created', summary: `Lead created by ${req.user.email}` }]
+  };
   db.leads.push(lead);
   writeDb(db);
   res.status(201).json(lead);
+});
+
+app.put('/leads/:id', authMiddleware, (req, res) => {
+  const db = readDb();
+  const { id } = req.params;
+  const idx = db.leads.findIndex(l => l.id === id);
+  if (idx === -1) return res.status(404).json({ message: 'Lead not found' });
+  const updates = { ...req.body };
+  if (updates.tags) updates.tags = toArrayTags(updates.tags);
+  const lead = db.leads[idx];
+  const now = new Date().toISOString();
+  const activity = lead.activity || [];
+  activity.push({ id: uuidv4(), at: now, by: req.user.id, action: 'updated', summary: 'Lead updated' });
+  db.leads[idx] = { ...lead, ...updates, activity };
+  writeDb(db);
+  res.json(db.leads[idx]);
+});
+
+app.get('/leads/:id/activity', authMiddleware, (req, res) => {
+  const db = readDb();
+  const { id } = req.params;
+  const lead = db.leads.find(l => l.id === id);
+  if (!lead) return res.status(404).json({ message: 'Not found' });
+  res.json(lead.activity || []);
 });
 
 // Users (admin managed)
@@ -175,6 +338,40 @@ app.get('/users', authMiddleware, (req, res) => {
     return res.json(u ? [u] : []);
   }
   res.json(db.users.map(u => ({ id: u.id, email: u.email, name: u.name, role: u.role })));
+});
+
+// Global search
+app.get('/search', authMiddleware, (req, res) => {
+  const db = readDb();
+  const q = (req.query.q || '').toLowerCase();
+  if (!q) return res.json({ tasks: [], leads: [], users: [] });
+  let tasks = db.tasks;
+  if (req.user.role === 'user') tasks = tasks.filter(t => t.assignedTo === req.user.id);
+  tasks = tasks.filter(t => [t.title, t.description, t.reason, ...(t.tags || [])].map(v => String(v || '').toLowerCase()).join(' ').includes(q));
+  const leads = db.leads.filter(l => [l.name, l.email, l.phone, ...(l.tags || [])].map(v => String(v || '').toLowerCase()).join(' ').includes(q));
+  const users = db.users
+    .filter(u => [u.name, u.email, u.role].map(v => String(v || '').toLowerCase()).join(' ').includes(q))
+    .map(u => ({ id: u.id, name: u.name, email: u.email, role: u.role }));
+  res.json({ tasks, leads, users });
+});
+
+// Dashboard summary
+app.get('/dashboard/summary', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  let tasks = db.tasks;
+  if (user.role === 'user') tasks = tasks.filter(t => t.assignedTo === user.id);
+  const leads = db.leads;
+  const tasksByStatus = tasks.reduce((acc, t) => { acc[t.status] = (acc[t.status] || 0) + 1; return acc; }, {});
+  const leadsByStage = leads.reduce((acc, l) => { acc[l.stage] = (acc[l.stage] || 0) + 1; return acc; }, {});
+  const overdue = tasks.filter(t => t.dueDate && new Date(t.dueDate) < new Date() && t.status !== 'done').length;
+  res.json({
+    totalTasks: tasks.length,
+    totalLeads: leads.length,
+    overdueTasks: overdue,
+    tasksByStatus,
+    leadsByStage
+  });
 });
 
 app.post('/users', authMiddleware, (req, res) => {
