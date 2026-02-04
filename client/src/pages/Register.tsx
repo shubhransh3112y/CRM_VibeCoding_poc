@@ -2,39 +2,44 @@ import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { 
-  TextField, Button, Box, Typography, Paper, InputAdornment, IconButton, 
-  CircularProgress, Alert, Divider, Checkbox, FormControlLabel 
+  TextField, Button, Box, Typography, Paper, InputAdornment, IconButton,
+  CircularProgress, Alert, Divider 
 } from '@mui/material'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { useAuth } from '../context/AuthContext'
+import axios from 'axios'
+import PersonIcon from '@mui/icons-material/Person'
 import EmailIcon from '@mui/icons-material/Email'
 import LockIcon from '@mui/icons-material/Lock'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-import LoginIcon from '@mui/icons-material/Login'
+import HowToRegIcon from '@mui/icons-material/HowToReg'
+
+const API = import.meta.env.VITE_API_BASE || 'http://localhost:4000'
 
 const schema = yup.object({
+  firstName: yup.string().required('First name is required'),
+  lastName: yup.string().required('Last name is required'),
   email: yup.string().email('Please enter a valid email').required('Email is required'),
-  password: yup.string().required('Password is required')
+  password: yup.string().required('Password is required').min(6, 'Password must be at least 6 characters')
 }).required()
 
-export default function Login() {
-  const { login } = useAuth()
+export default function Register() {
   const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
-  const [rememberMe, setRememberMe] = useState(false)
+  const [success, setSuccess] = useState(false)
   
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({ resolver: yupResolver(schema) })
 
   const onSubmit = async (data: any) => {
     try {
       setError('')
-      await login(data.email, data.password)
-      navigate('/dashboard')
+      await axios.post(API + '/auth/register', data)
+      setSuccess(true)
+      setTimeout(() => navigate('/login'), 2000)
     } catch (err: any) {
-      setError(err?.response?.data?.message || 'Invalid email or password. Please try again.')
+      setError(err?.response?.data?.message || 'Registration failed. Please try again.')
     }
   }
 
@@ -44,16 +49,13 @@ export default function Login() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundImage: 'linear-gradient(135deg, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.6) 100%), url(/login.jpeg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
       p: 3,
     }}>
       <Paper 
         sx={{ 
           p: 0, 
-          maxWidth: 440, 
+          maxWidth: 480, 
           width: '100%', 
           borderRadius: 4,
           overflow: 'hidden',
@@ -91,7 +93,7 @@ export default function Login() {
             </Typography>
           </Box>
           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)' }}>
-            Welcome back! Sign in to continue
+            Create your account to get started
           </Typography>
         </Box>
 
@@ -107,7 +109,55 @@ export default function Login() {
             </Alert>
           )}
 
+          {success && (
+            <Alert 
+              severity="success" 
+              sx={{ mb: 3, borderRadius: 2 }}
+            >
+              Registration successful! Redirecting to login...
+            </Alert>
+          )}
+
           <Box component="form" onSubmit={handleSubmit(onSubmit)}>
+            <Box sx={{ display: 'flex', gap: 2 }}>
+              <TextField 
+                fullWidth 
+                label="First Name" 
+                margin="normal" 
+                {...register('firstName')} 
+                helperText={errors.firstName?.message as string} 
+                error={!!errors.firstName}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PersonIcon sx={{ color: 'text.secondary' }} />
+                    </InputAdornment>
+                  ),
+                }}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    borderRadius: 2,
+                    '&:hover fieldset': { borderColor: '#667eea' },
+                    '&.Mui-focused fieldset': { borderColor: '#667eea' }
+                  }
+                }}
+              />
+              <TextField 
+                fullWidth 
+                label="Last Name" 
+                margin="normal" 
+                {...register('lastName')} 
+                helperText={errors.lastName?.message as string} 
+                error={!!errors.lastName}
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    borderRadius: 2,
+                    '&:hover fieldset': { borderColor: '#667eea' },
+                    '&.Mui-focused fieldset': { borderColor: '#667eea' }
+                  }
+                }}
+              />
+            </Box>
             <TextField 
               fullWidth 
               label="Email Address" 
@@ -136,7 +186,7 @@ export default function Login() {
               type={showPassword ? 'text' : 'password'}
               margin="normal" 
               {...register('password')} 
-              helperText={errors.password?.message as string} 
+              helperText={errors.password?.message as string || 'Password must be at least 6 characters'} 
               error={!!errors.password}
               InputProps={{
                 startAdornment: (
@@ -165,41 +215,15 @@ export default function Login() {
               }}
             />
 
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1, mb: 2 }}>
-              <FormControlLabel
-                control={
-                  <Checkbox 
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    size="small"
-                    sx={{ '&.Mui-checked': { color: '#667eea' } }}
-                  />
-                }
-                label={<Typography variant="body2" color="text.secondary">Remember me</Typography>}
-              />
-              <Typography 
-                component={Link} 
-                to="/forgot-password"
-                variant="body2" 
-                sx={{ 
-                  color: '#667eea', 
-                  textDecoration: 'none',
-                  '&:hover': { textDecoration: 'underline' }
-                }}
-              >
-                Forgot password?
-              </Typography>
-            </Box>
-
             <Button 
               type="submit" 
               variant="contained" 
               fullWidth
               size="large"
-              disabled={isSubmitting}
-              startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : <LoginIcon />}
+              disabled={isSubmitting || success}
+              startIcon={isSubmitting ? <CircularProgress size={20} color="inherit" /> : <HowToRegIcon />}
               sx={{ 
-                mt: 1,
+                mt: 3,
                 py: 1.5,
                 borderRadius: 2,
                 textTransform: 'none',
@@ -216,19 +240,19 @@ export default function Login() {
                 }
               }}
             >
-              {isSubmitting ? 'Signing in...' : 'Sign In'}
+              {isSubmitting ? 'Creating Account...' : 'Create Account'}
             </Button>
           </Box>
 
           <Divider sx={{ my: 3 }}>
             <Typography variant="body2" color="text.secondary">
-              New to CRM Pro?
+              Already have an account?
             </Typography>
           </Divider>
 
           <Button
             component={Link}
-            to="/register"
+            to="/login"
             variant="outlined"
             fullWidth
             size="large"
@@ -246,14 +270,14 @@ export default function Login() {
               }
             }}
           >
-            Create an Account
+            Sign In Instead
           </Button>
         </Box>
 
         {/* Footer */}
         <Box sx={{ px: 4, pb: 3, textAlign: 'center' }}>
           <Typography variant="caption" color="text.secondary">
-            By signing in, you agree to our{' '}
+            By creating an account, you agree to our{' '}
             <Box component="span" sx={{ color: '#667eea', cursor: 'pointer' }}>Terms of Service</Box>
             {' '}and{' '}
             <Box component="span" sx={{ color: '#667eea', cursor: 'pointer' }}>Privacy Policy</Box>

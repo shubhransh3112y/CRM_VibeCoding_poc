@@ -3,11 +3,14 @@ import { TableRow, TableCell, TextField, MenuItem, Select, InputLabel, FormContr
 
 export type Column = { key: string; label?: string; type?: 'text'|'select'|'date'|'date-range' | string; options?: string[] }
 
-export default function TableFilters({ columns, filters, onChange }: { columns: Column[]; filters: any; onChange: (next: any) => void }) {
+export default function TableFilters({ columns, filters, onChange, prefixCells = 0, suffixCells = 0 }: { columns: Column[]; filters: any; onChange: (next: any) => void; prefixCells?: number; suffixCells?: number }) {
   const set = (k: string, v: any) => onChange({ ...filters, [k]: v })
 
   return (
     <TableRow>
+      {Array.from({ length: prefixCells }).map((_, i) => (
+        <TableCell key={`prefix-${i}`} />
+      ))}
       {columns.map((col) => (
         <TableCell key={col.key}>
           {col.type === 'select' ? (
@@ -51,6 +54,9 @@ export default function TableFilters({ columns, filters, onChange }: { columns: 
             />
           )}
         </TableCell>
+      ))}
+      {Array.from({ length: suffixCells }).map((_, i) => (
+        <TableCell key={`suffix-${i}`} />
       ))}
     </TableRow>
   )

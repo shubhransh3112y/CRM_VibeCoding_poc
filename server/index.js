@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
   }
 });
 
-const allowedMimes = ['image/jpeg', 'image/png', 'application/pdf'];
+const allowedMimes = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf'];
 const upload = multer({
   storage,
   fileFilter: (req, file, cb) => {
@@ -40,8 +40,15 @@ app.use('/uploads', express.static(UPLOAD_DIR));
 const DB_PATH = path.join(__dirname, 'data', 'db.json');
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
 
+function ensureCollections(db) {
+  db.views = db.views || [];
+  db.teams = db.teams || [];
+  db.notifications = db.notifications || [];
+  return db;
+}
+
 function readDb() {
-  return JSON.parse(fs.readFileSync(DB_PATH, 'utf8'));
+  return ensureCollections(JSON.parse(fs.readFileSync(DB_PATH, 'utf8')));
 }
 
 function writeDb(db) {
@@ -158,8 +165,23 @@ app.post('/auth/login', (req, res) => {
   res.json({ token });
 });
 
+app.post('/auth/register', (req, res) => {
+  const db = readDb();
+  const { name, firstName, lastName, email, password } = req.body;
+  const displayName = name || [firstName, lastName].filter(Boolean).join(' ').trim();
+  if (!email || !password || !displayName) return res.status(400).json({ message: 'name, email and password required' });
+  if (db.users.find(u => u.email === email)) return res.status(400).json({ message: 'Email already exists' });
+  const newUser = { id: uuidv4(), email, password, name: displayName, firstName: firstName || '', lastName: lastName || '', role: 'user', avatar: null };
+  db.users.push(newUser);
+  writeDb(db);
+  res.status(201).json({ id: newUser.id, email: newUser.email, name: newUser.name, role: newUser.role, firstName: newUser.firstName, lastName: newUser.lastName, avatar: newUser.avatar });
+});
+
 app.get('/auth/me', authMiddleware, (req, res) => {
-  res.json({ user: req.user });
+  const db = readDb();
+  const u = db.users.find(x => x.id === req.user.id);
+  if (!u) return res.json({ user: req.user });
+  res.json({ user: { id: u.id, email: u.email, role: u.role, name: u.name, firstName: u.firstName, lastName: u.lastName, avatar: u.avatar } });
 });
 
 // Tasks
@@ -200,6 +222,16 @@ app.post('/tasks', authMiddleware, (req, res) => {
     ]
   };
   db.tasks.push(task);
+  if (assignedTo) {
+    db.notifications.push({
+      id: uuidv4(),
+      at: now,
+      userId: assignedTo,
+      type: 'task-assigned',
+      message: `New task assigned: ${title}`,
+      read: false
+    });
+  }
   writeDb(db);
 
   // Mock email notify
@@ -245,9 +277,64 @@ app.put('/tasks/:id', authMiddleware, upload.single('attachment'), (req, res) =>
   const summary = updates.status ? `Status changed to ${updates.status}` : 'Task updated';
   activity.push({ id: uuidv4(), at: now, by: user.id, action: 'updated', summary });
 
+  if (updates.assignedTo && updates.assignedTo !== task.assignedTo) {
+    db.notifications.push({
+      id: uuidv4(),
+      at: now,
+      userId: updates.assignedTo,
+      type: 'task-assigned',
+      message: `New task assigned: ${task.title}`,
+      read: false
+    });
+  }
+
+  if (updates.status) {
+    db.notifications.push({
+      id: uuidv4(),
+      at: now,
+      userId: task.assignedTo || null,
+      type: 'task-status',
+      message: `Task "${task.title}" status: ${updates.status}`,
+      read: false
+    });
+  }
+
   db.tasks[idx] = { ...task, ...updates, activity };
   writeDb(db);
   res.json(db.tasks[idx]);
+});
+
+app.post('/tasks/bulk', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  if (user.role === 'user') return res.status(403).json({ message: 'Forbidden' });
+  const { ids = [], updates = {} } = req.body;
+  const now = new Date().toISOString();
+  let updated = 0;
+  const assignedNotifications = [];
+  db.tasks = db.tasks.map(t => {
+    if (!ids.includes(t.id)) return t;
+    updated += 1;
+    const activity = t.activity || [];
+    activity.push({ id: uuidv4(), at: now, by: user.id, action: 'bulk-update', summary: 'Bulk update applied' });
+    const next = { ...t, ...updates, activity };
+    if (updates.assignedTo) {
+      assignedNotifications.push({
+        id: uuidv4(),
+        at: now,
+        userId: updates.assignedTo,
+        type: 'task-assigned',
+        message: `New task assigned: ${next.title}`,
+        read: false
+      });
+    }
+    return next;
+  });
+  if (assignedNotifications.length) {
+    db.notifications.push(...assignedNotifications);
+  }
+  writeDb(db);
+  res.json({ updated });
 });
 
 app.delete('/tasks/:id', authMiddleware, (req, res) => {
@@ -300,6 +387,14 @@ app.post('/leads', authMiddleware, (req, res) => {
     activity: [{ id: uuidv4(), at: now, by: req.user.id, action: 'created', summary: `Lead created by ${req.user.email}` }]
   };
   db.leads.push(lead);
+  db.notifications.push({
+    id: uuidv4(),
+    at: now,
+    userId: owner || null,
+    type: 'lead-created',
+    message: `New lead assigned: ${name}`,
+    read: false
+  });
   writeDb(db);
   res.status(201).json(lead);
 });
@@ -315,9 +410,101 @@ app.put('/leads/:id', authMiddleware, (req, res) => {
   const now = new Date().toISOString();
   const activity = lead.activity || [];
   activity.push({ id: uuidv4(), at: now, by: req.user.id, action: 'updated', summary: 'Lead updated' });
+  if (updates.stage) {
+    db.notifications.push({
+      id: uuidv4(),
+      at: now,
+      userId: lead.owner || null,
+      type: 'lead-stage',
+      message: `Lead "${lead.name}" stage: ${updates.stage}`,
+      read: false
+    });
+  }
   db.leads[idx] = { ...lead, ...updates, activity };
   writeDb(db);
   res.json(db.leads[idx]);
+});
+
+app.post('/leads/bulk', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  if (user.role === 'user') return res.status(403).json({ message: 'Forbidden' });
+  const { ids = [], updates = {} } = req.body;
+  const now = new Date().toISOString();
+  let updated = 0;
+  db.leads = db.leads.map(l => {
+    if (!ids.includes(l.id)) return l;
+    updated += 1;
+    const activity = l.activity || [];
+    activity.push({ id: uuidv4(), at: now, by: user.id, action: 'bulk-update', summary: 'Bulk update applied' });
+    return { ...l, ...updates, activity };
+  });
+  writeDb(db);
+  res.json({ updated });
+});
+
+app.get('/notifications', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  const items = db.notifications.filter(n => !n.userId || n.userId === user.id).slice().reverse();
+  res.json(items);
+});
+
+app.post('/notifications/:id/read', authMiddleware, (req, res) => {
+  const db = readDb();
+  const { id } = req.params;
+  const idx = db.notifications.findIndex(n => n.id === id);
+  if (idx === -1) return res.status(404).json({ message: 'Not found' });
+  db.notifications[idx].read = true;
+  writeDb(db);
+  res.json(db.notifications[idx]);
+});
+
+app.post('/notifications/read-all', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  let updated = 0;
+  db.notifications = db.notifications.map(n => {
+    if ((n.userId == null || n.userId === user.id) && !n.read) {
+      updated += 1;
+      return { ...n, read: true };
+    }
+    return n;
+  });
+  writeDb(db);
+  res.json({ updated });
+});
+
+app.get('/views', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  res.json(db.views.filter(v => v.userId === user.id));
+});
+
+app.post('/views', authMiddleware, (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  const { name, page, filters } = req.body;
+  if (!name || !page) return res.status(400).json({ message: 'name and page required' });
+  const view = { id: uuidv4(), userId: user.id, name, page, filters };
+  db.views.push(view);
+  writeDb(db);
+  res.status(201).json(view);
+});
+
+app.get('/teams', authMiddleware, (req, res) => {
+  const db = readDb();
+  res.json(db.teams);
+});
+
+app.post('/teams', authMiddleware, (req, res) => {
+  const db = readDb();
+  const { name, members = [] } = req.body;
+  if (!name) return res.status(400).json({ message: 'name required' });
+  const team = { id: uuidv4(), name, members };
+  db.teams.push(team);
+  writeDb(db);
+  res.status(201).json(team);
 });
 
 app.get('/leads/:id/activity', authMiddleware, (req, res) => {
@@ -338,6 +525,75 @@ app.get('/users', authMiddleware, (req, res) => {
     return res.json(u ? [u] : []);
   }
   res.json(db.users.map(u => ({ id: u.id, email: u.email, name: u.name, role: u.role })));
+});
+
+app.put('/users/me', authMiddleware, upload.single('avatar'), (req, res) => {
+  const db = readDb();
+  const user = req.user;
+  let idx = db.users.findIndex(u => u.id === user.id);
+  if (idx === -1) {
+    const created = { id: user.id, email: user.email || '', password: '', name: user.name || '', firstName: '', lastName: '', role: user.role || 'user', avatar: null };
+    db.users.push(created);
+    idx = db.users.length - 1;
+  }
+
+  const existing = db.users[idx];
+  const { firstName, lastName, name, email, password, removeAvatar } = req.body;
+
+  if (email && db.users.some(u => u.email === email && u.id !== user.id)) {
+    return res.status(400).json({ message: 'Email already exists' });
+  }
+
+  const updates = {};
+  if (firstName !== undefined) updates.firstName = String(firstName || '');
+  if (lastName !== undefined) updates.lastName = String(lastName || '');
+  if (name !== undefined) updates.name = String(name || '');
+  if (email !== undefined) updates.email = String(email || '');
+  if (password !== undefined && String(password)) updates.password = String(password);
+
+  const shouldRemoveAvatar = String(removeAvatar || '').toLowerCase() === 'true';
+  if (shouldRemoveAvatar && existing.avatar?.url) {
+    const p = path.join(UPLOAD_DIR, path.basename(existing.avatar.url));
+    if (fs.existsSync(p)) {
+      try { fs.unlinkSync(p); } catch (e) {}
+    }
+    updates.avatar = null;
+  }
+
+  if (req.file) {
+    const ext = path.extname(req.file.originalname || '').toLowerCase();
+    const isImage = req.file.mimetype === 'image/jpeg' || req.file.mimetype === 'image/png';
+    if (!isImage || !['.jpg', '.jpeg', '.png'].includes(ext)) {
+      const p = path.join(UPLOAD_DIR, path.basename(req.file.filename));
+      if (fs.existsSync(p)) {
+        try { fs.unlinkSync(p); } catch (e) {}
+      }
+      return res.status(400).json({ message: 'Only jpg, jpeg, png files are allowed' });
+    }
+    if (existing.avatar?.url) {
+      const p = path.join(UPLOAD_DIR, path.basename(existing.avatar.url));
+      if (fs.existsSync(p)) {
+        try { fs.unlinkSync(p); } catch (e) {}
+      }
+    }
+    updates.avatar = {
+      filename: req.file.originalname,
+      url: `/uploads/${req.file.filename}`,
+      mime: req.file.mimetype
+    };
+  }
+
+  if ((updates.firstName !== undefined || updates.lastName !== undefined) && !updates.name) {
+    const fn = updates.firstName !== undefined ? updates.firstName : (existing.firstName || '');
+    const ln = updates.lastName !== undefined ? updates.lastName : (existing.lastName || '');
+    const merged = [fn, ln].filter(Boolean).join(' ').trim();
+    if (merged) updates.name = merged;
+  }
+
+  db.users[idx] = { ...existing, ...updates };
+  writeDb(db);
+  const u = db.users[idx];
+  res.json({ id: u.id, email: u.email, role: u.role, name: u.name, firstName: u.firstName, lastName: u.lastName, avatar: u.avatar });
 });
 
 // Global search

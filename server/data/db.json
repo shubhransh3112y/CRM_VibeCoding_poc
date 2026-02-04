@@ -26,7 +26,28 @@
       "email": "shubhransh46@gmail.com",
       "password": "shubh123",
       "name": "shubhransh Yadav",
-      "role": "user"
+      "role": "user",
+      "firstName": "shubhransh",
+      "lastName": "Yadav",
+      "avatar": {
+        "filename": "photo.jpg",
+        "url": "/uploads/1770164688874-photo.jpg",
+        "mime": "image/jpeg"
+      }
+    },
+    {
+      "id": "13fba763-53b4-493d-b176-a54a0070593f",
+      "email": "ayushigupta1998@gmail.com",
+      "password": "ayu123",
+      "name": "Ayushi Gupta",
+      "firstName": "Ayushi",
+      "lastName": "Gupta",
+      "role": "user",
+      "avatar": {
+        "filename": "RG.jpg",
+        "url": "/uploads/1770173688782-RG.jpg",
+        "mime": "image/jpeg"
+      }
     }
   ],
   "tasks": [
@@ -80,6 +101,4283 @@
       "description": "Check the LEAD AND contact him for update",
       "leadId": "l1",
       "reason": "Client ask for lower quote amout\n"
+    },
+    {
+      "id": "4fb2a39e-f0d7-4f3b-bcd0-2f0c087d60a9",
+      "title": "Task 1",
+      "description": "Generated task 1",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-09-26",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "06c60002-ccdd-491d-98b6-9de89ea079ba",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1724ab23-998a-4417-a871-ee9869de0c1e",
+      "title": "Task 2",
+      "description": "Generated task 2",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-02-12",
+      "assignedTo": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "53d2f921-8355-4f48-a254-dca0edef498b",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3d0e9d50-1fe5-4044-b676-196ecc2a8458",
+      "title": "Task 3",
+      "description": "Generated task 3",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-10-13",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "70858f91-d196-4ba2-ac00-03e1425bd8a5",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a1909a19-f853-4295-8d70-772895b2e763",
+      "title": "Task 4",
+      "description": "Generated task 4",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-01-30",
+      "assignedTo": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "8c13e860-7de6-4678-b7c9-d045347f7b3e",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1b2bab41-28e6-40e6-ba6f-c07eec90f91c",
+      "title": "Task 5",
+      "description": "Generated task 5",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-06-10",
+      "assignedTo": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "3295ac68-fadb-4aed-9bb1-0bf7df4f5590",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "59227b6f-9f9f-4a02-beb9-12e0eef20eab",
+      "title": "Task 6",
+      "description": "Generated task 6",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-06-03",
+      "assignedTo": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "53cbb5a1-91ef-47f2-9f03-f0133edca3b9",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d90e417c-41de-4a96-a84c-5304861efc26",
+      "title": "Task 7",
+      "description": "Generated task 7",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-09-08",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "f735ae2e-86a9-46ec-ab9e-bd664e8eb17f",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "cc939c7e-465c-4b5e-97c9-62a55a768244",
+      "title": "Task 8",
+      "description": "Generated task 8",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-05-24",
+      "assignedTo": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "2d40281a-6949-4400-96f5-8442edae2a58",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "ad8308ed-d269-44d9-95d1-bbfe57d842be",
+      "title": "Task 9",
+      "description": "Generated task 9",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-08-15",
+      "assignedTo": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "f1e2c6e0-f393-44ce-87dd-d1e7200b3ebe",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "efe56a6d-7883-482f-851b-a49c2319aaf7",
+      "title": "Task 10",
+      "description": "Generated task 10",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-06-11",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "2890b83f-92f9-4b59-9323-82df65452b58",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "58e34202-33d4-4d9e-877d-388bd74e1119",
+      "title": "Task 11",
+      "description": "Generated task 11",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-12-11",
+      "assignedTo": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "6613782c-1d44-4ee2-a9f3-dcb78708b7af",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1ff6f242-c691-420d-b247-ebda6af00f7b",
+      "title": "Task 12",
+      "description": "Generated task 12",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-06-17",
+      "assignedTo": "u1",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "ec1f7424-10e5-4e21-abd0-c6849c772819",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7b63f0bd-7eb6-4cce-a5e8-90145b184dd8",
+      "title": "Task 13",
+      "description": "Generated task 13",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-01-15",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "14de179a-a74d-4144-8e8c-0bf8eafd7af5",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1f81263e-4028-42ee-9e6d-425c3f97eb37",
+      "title": "Task 14",
+      "description": "Generated task 14",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-10-03",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "67910f8a-3d52-4e1e-bce0-270f266651d7",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f39464f5-c15f-4a13-9cbc-14089577d98a",
+      "title": "Task 15",
+      "description": "Generated task 15",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-06-13",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "6a36352e-0501-4e8a-999a-fb2a7126cf8d",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "2d1d2449-f11f-49ff-91e1-2b3035a09de4",
+      "title": "Task 16",
+      "description": "Generated task 16",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-06-16",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "01bb32a6-2e59-4f7d-8165-1da45f872997",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "47b2e8ae-0588-4691-ad83-161ebec18125",
+      "title": "Task 17",
+      "description": "Generated task 17",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-04-12",
+      "assignedTo": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "43c47a6b-ff26-4205-a288-fa7024a4dd6b",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a1d53124-4e8e-411e-80bb-949692d15fae",
+      "title": "Task 18",
+      "description": "Generated task 18",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-12-08",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "4c486335-546c-436d-8e96-b3b086eb43f9",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "813d84d6-40ab-4a3c-a695-f88d5584881f",
+      "title": "Task 19",
+      "description": "Generated task 19",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-10-26",
+      "assignedTo": "u1",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "80ed8844-3442-4dcb-a7c2-c3d4ea5f5d1e",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5033a55a-dddc-4651-ae58-ad8ada15785f",
+      "title": "Task 20",
+      "description": "Generated task 20",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-08-12",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "ea7a65d3-7aaa-4a07-ba00-03f07f272e44",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "688be00f-90e7-4beb-aadc-dbef99b3d6b2",
+      "title": "Task 21",
+      "description": "Generated task 21",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-08-15",
+      "assignedTo": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "e9f2c032-f3fc-4aea-9311-5b6d0beb0967",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "ae8d0be5-d752-426a-ad5e-00ff81690a40",
+      "title": "Task 22",
+      "description": "Generated task 22",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-07-29",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "6b81ba90-a239-4873-82a0-493eef98164b",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d37dd16f-a047-49da-897f-bf645a35356a",
+      "title": "Task 23",
+      "description": "Generated task 23",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-06-01",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "4c776742-be7b-436f-9b99-bc59c3b078f5",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "80df7650-8d49-49a9-bd38-371f0629debd",
+      "title": "Task 24",
+      "description": "Generated task 24",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-09-17",
+      "assignedTo": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "1252f124-4a13-4b4c-bf57-7ec74df66931",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b74ce659-03b8-4663-b9ba-663891877c24",
+      "title": "Task 25",
+      "description": "Generated task 25",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-08-28",
+      "assignedTo": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "e0c771e2-8974-466b-b74f-96b0106c564f",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "50d5a4c0-8e5e-4d73-8304-3805937bddb4",
+      "title": "Task 26",
+      "description": "Generated task 26",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-05-03",
+      "assignedTo": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "35b450c5-5775-4fba-a91e-d67b3a68cfc2",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "601d841c-b712-4af8-8f13-b8f57c6bbde8",
+      "title": "Task 27",
+      "description": "Generated task 27",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-11-22",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "c31dc8f1-7877-4c27-9e78-bd25e0598a6a",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "190f045a-6de1-4dea-bfc1-535821c37e21",
+      "title": "Task 28",
+      "description": "Generated task 28",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-06-15",
+      "assignedTo": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "0bbb405e-f968-4003-a446-95fe7a6f94a0",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a7d5eeeb-11b5-472e-960c-5ca3166d4db0",
+      "title": "Task 29",
+      "description": "Generated task 29",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-04-01",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "d449cfce-4b25-4d04-836c-f112454ddbd6",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "783444f4-6703-4037-8c1e-1c253ad9a55a",
+      "title": "Task 30",
+      "description": "Generated task 30",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-10-02",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "ca3d5b6f-4cd5-4b28-96e2-f18c5754f973",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a569911a-3d74-4a25-8fad-192d7d6eef44",
+      "title": "Task 31",
+      "description": "Generated task 31",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-03-29",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "4c3b3df5-1853-48e6-af52-984153078444",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "4fc84df7-dccf-42e1-90b9-a87f177f6583",
+      "title": "Task 32",
+      "description": "Generated task 32",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-05-22",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "7cd51ae1-7bc7-4d9a-b024-3522dcaccbe7",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "48e84566-caf8-4ab0-9dfe-28dead457beb",
+      "title": "Task 33",
+      "description": "Generated task 33",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-02-03",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "ff7c38cb-660e-4f80-b481-9562c59b4dd1",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3af67d2b-3a70-45d8-836b-0097e4edb3cc",
+      "title": "Task 34",
+      "description": "Generated task 34",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-07-21",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "4243889d-1977-4ec2-b5b9-dd723077545f",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "eb4a0e0e-9f97-404d-b66f-dcd169252f9b",
+      "title": "Task 35",
+      "description": "Generated task 35",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-07-28",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "2673185c-15a3-4465-955f-a97bb2b9d638",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "ed026ce5-06e8-4b39-857e-2b120a5bd133",
+      "title": "Task 36",
+      "description": "Generated task 36",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-06-18",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "eb49e749-7a6e-4b66-83a4-4680b9171c42",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b5680106-9db4-4933-8494-a7003e60b564",
+      "title": "Task 37",
+      "description": "Generated task 37",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-03-29",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "683116ba-766a-43b2-8f54-182dffcb6421",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0063e426-1dd8-4e00-b832-c1efc2a462c5",
+      "title": "Task 38",
+      "description": "Generated task 38",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-01-11",
+      "assignedTo": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "df515828-5656-4fac-98a9-cf39530ae616",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3b3a0bd0-b8d0-4a50-814c-e5023c7e3a95",
+      "title": "Task 39",
+      "description": "Generated task 39",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-10-20",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "c2ffd2b9-a0fc-4cbd-8ddc-723bf4642bba",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1ecca666-1b03-4464-b4c6-c4bbbe353013",
+      "title": "Task 40",
+      "description": "Generated task 40",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-08-16",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "471eb100-1877-4a97-a284-1b9f47726c97",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d4b4e24a-4eda-4f16-83d7-967efe7096b5",
+      "title": "Task 41",
+      "description": "Generated task 41",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-02-17",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "6c7c1f05-e91f-49c6-93b5-447bf9234d5e",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b3657341-7e34-4ef2-9cfe-108c4478c695",
+      "title": "Task 42",
+      "description": "Generated task 42",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-07-05",
+      "assignedTo": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "4200a934-c6e3-4186-abd1-f46707b03513",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d1dc87a1-62f2-4c08-bf1a-e8b0f271b833",
+      "title": "Task 43",
+      "description": "Generated task 43",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-05-10",
+      "assignedTo": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "9146933c-a98c-49a6-bf4d-889bba4905a5",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c6887897-a7fd-42b1-8493-0d3d5b9d71a0",
+      "title": "Task 44",
+      "description": "Generated task 44",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-09-04",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "7d136fc3-47d5-47b7-9d0c-d3697968c9b5",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "51c1005e-ef54-4625-8d5d-9eeb93560e2d",
+      "title": "Task 45",
+      "description": "Generated task 45",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-09-28",
+      "assignedTo": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "c3bf4285-059b-4ed9-ac85-9bebeaaf947b",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "15426297-8256-4fd2-8002-207e39422a9c",
+      "title": "Task 46",
+      "description": "Generated task 46",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-04-18",
+      "assignedTo": "u2",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "2fb718b7-55e4-48f2-b4e8-c74a9897b49b",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5663f556-17eb-4d1c-a879-f693ad59f10a",
+      "title": "Task 47",
+      "description": "Generated task 47",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-08-15",
+      "assignedTo": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "8fa62a39-6b4f-4937-b20e-d59d24f446b0",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "6370bdfb-71e7-4cbd-8034-054ca8895905",
+      "title": "Task 48",
+      "description": "Generated task 48",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-06-29",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "edced643-1a5c-4a17-98fe-d4d3a7b6fdac",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c8141dd2-63fe-4d16-aa0e-3581c30bad06",
+      "title": "Task 49",
+      "description": "Generated task 49",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-08-29",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "35747f10-6976-490c-89bd-cacc146a36f2",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7edf3aad-80f9-41e3-849a-0b11cf5e6ce6",
+      "title": "Task 50",
+      "description": "Generated task 50",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-08-26",
+      "assignedTo": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "1c471cdc-cd46-4e58-a8aa-41f8168282a2",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c687e3b9-0bb3-4478-88fa-dbf3726eee40",
+      "title": "Task 51",
+      "description": "Generated task 51",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-07-13",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "6276bdd0-b76e-4bb9-a846-2d5e8f43a992",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0490d1f3-9e7e-4071-acaa-d553de287d08",
+      "title": "Task 52",
+      "description": "Generated task 52",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-11-04",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "b7a05f6f-2176-49de-a6e0-27a2ce7adfd2",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "32fc8da7-edf2-4d9c-a177-56e8d57e6f0d",
+      "title": "Task 53",
+      "description": "Generated task 53",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-01-28",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "45f65902-ac95-4189-801f-20eba56bfab2",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9ae0e3f4-f3c9-4034-bdbc-6e68af7f8a06",
+      "title": "Task 54",
+      "description": "Generated task 54",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-09-23",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "28fd68a8-0857-46fb-ae46-5c1a80ed306a",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "752e69fe-289d-47cd-87d4-dc63121ecef8",
+      "title": "Task 55",
+      "description": "Generated task 55",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-05-26",
+      "assignedTo": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "24dd3df7-4449-4adf-8985-40833a797df2",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0de83316-9420-4318-b493-c1e9ec9b2dac",
+      "title": "Task 56",
+      "description": "Generated task 56",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-07-16",
+      "assignedTo": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "26e1f5f1-15c2-48e3-b362-fa5ae1fa0108",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5dcd368a-0acf-47e5-a3ac-050291613678",
+      "title": "Task 57",
+      "description": "Generated task 57",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-06-01",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "cad18266-8abb-4855-a119-26abefbbdf7b",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "8fd7cdf7-c8d4-4357-9b13-a1b233685677",
+      "title": "Task 58",
+      "description": "Generated task 58",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-04-16",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "f4a649fd-7ee4-4980-ae8a-14e743cf6d80",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "627f99b5-3292-40d0-9867-dcda2eeea38f",
+      "title": "Task 59",
+      "description": "Generated task 59",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-04-21",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "d91a3db2-9b3f-4a48-a377-81ec99ff9b53",
+          "at": "2026-02-03T23:13:33.151Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "bea4adee-de68-46a8-8870-819769028794",
+      "title": "Task 60",
+      "description": "Generated task 60",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-05-10",
+      "assignedTo": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "bc04baec-d156-4cbe-b431-088c0c542264",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "e70f51d6-7977-4bc5-aed1-34bef47fffae",
+      "title": "Task 61",
+      "description": "Generated task 61",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-08-02",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "893b534e-0b66-4b10-9781-a88ec6ac3712",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3965bf1d-dea3-4d66-b991-7e2317cb279c",
+      "title": "Task 62",
+      "description": "Generated task 62",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-01-29",
+      "assignedTo": "u1",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "040ab6c4-911d-401f-91d4-c156493cf087",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b8373835-8ba7-45ac-bc8a-2b04b73855b1",
+      "title": "Task 63",
+      "description": "Generated task 63",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-03-07",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "d350c3d4-12c3-447c-87a5-be16f4be921c",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "97c15eef-d2c2-40c3-9e9d-31c0e8239215",
+      "title": "Task 64",
+      "description": "Generated task 64",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-02-22",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "5d8d413c-9345-41cc-9b22-05d079c366e7",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "61501755-83d0-4af7-8ffd-9c06b4911f0d",
+      "title": "Task 65",
+      "description": "Generated task 65",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-07-31",
+      "assignedTo": "u3",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "1030fae6-b52a-41e5-973d-69196a89d642",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "32990cb7-24a1-4534-8023-53b094cfa522",
+      "title": "Task 66",
+      "description": "Generated task 66",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-03-18",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "96c667ae-bfc9-4d08-a096-b64206ee87d9",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "dc043a82-607e-49d8-a5c1-93ecf34b8bc4",
+      "title": "Task 67",
+      "description": "Generated task 67",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-05-11",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "d0a295f7-f8b4-4f60-8963-5595a96f4e01",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9f5b93a7-23fc-4dc0-9d1f-3e9a2433143e",
+      "title": "Task 68",
+      "description": "Generated task 68",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-10-30",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "e1014377-6a26-4d6e-926f-d29d681cc1ef",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f79f7172-f945-45e1-b812-383fa38da7ee",
+      "title": "Task 69",
+      "description": "Generated task 69",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-02-17",
+      "assignedTo": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "a7d3577b-aa13-4bc4-a5dc-6ba1c34fd757",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1b2fd79e-91e1-4cba-a8fa-201876526ce4",
+      "title": "Task 70",
+      "description": "Generated task 70",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-07-02",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "d2459565-3213-4a9e-8e4c-16d59d8a7a4d",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "adea8194-9023-4e8c-bd2e-b987f9051437",
+      "title": "Task 71",
+      "description": "Generated task 71",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-03-22",
+      "assignedTo": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "b74a4c6b-b80d-4c8f-9323-8e88669868c9",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3db30229-a51f-4028-800b-eb4c5e5a89a8",
+      "title": "Task 72",
+      "description": "Generated task 72",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-10-30",
+      "assignedTo": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "a2d02578-74cf-4dc2-9d73-a1641439bb87",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "6d3a319b-72c2-475f-a175-ed3e750ffdf9",
+      "title": "Task 73",
+      "description": "Generated task 73",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-11-03",
+      "assignedTo": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "01437fa4-016c-4468-8ba4-482a829b5f4e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "aae8369f-29a7-48f8-bf08-f071bab4e6eb",
+      "title": "Task 74",
+      "description": "Generated task 74",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-08-10",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "7e8f4192-89e4-41f1-b857-78a6245c76a2",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "ff5809fb-40c4-47c2-b90a-8e2fd58b84e6",
+      "title": "Task 75",
+      "description": "Generated task 75",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-08-11",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "60b1ec5c-bee7-4080-a5f2-d5517f58cbbd",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a46ad2ed-42c1-4ac6-a02d-a5db00d447c8",
+      "title": "Task 76",
+      "description": "Generated task 76",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-09-12",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "d4dd3c46-9428-4e55-9c6d-725121a18839",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "581c549e-42dc-4fb6-a13f-9b0d6a287294",
+      "title": "Task 77",
+      "description": "Generated task 77",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-01-25",
+      "assignedTo": "u1",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "1ee00a07-5687-4fef-b6d5-1368bff76888",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9a44b0d2-61ec-47fe-aa77-c8b280775ae8",
+      "title": "Task 78",
+      "description": "Generated task 78",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-03-13",
+      "assignedTo": "u1",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "203d05f7-8cde-44d6-be29-24ed12222db6",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3d1b37af-1f71-454c-bba4-adce05f4ba33",
+      "title": "Task 79",
+      "description": "Generated task 79",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-08-01",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "546cd2df-2737-4ec3-a92a-4b08482eee3e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "76d5988a-dd72-43d2-93be-f0da0275be0c",
+      "title": "Task 80",
+      "description": "Generated task 80",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-01-17",
+      "assignedTo": "u1",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "e7967907-6285-4c5a-9c6e-659aa91dcd4e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0a2e37b2-dfac-4755-ad27-a688ada24929",
+      "title": "Task 81",
+      "description": "Generated task 81",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-05-22",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "61df0464-b2cb-478d-a03d-4e76527fb8dd",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "cbcf5e36-80a3-4ef6-95d1-531e703ab88f",
+      "title": "Task 82",
+      "description": "Generated task 82",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-06-18",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "86e481b7-7727-4a95-bd8a-bde74c6e3e8e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0c9ddb23-6a83-402a-b146-c0f81c3245d7",
+      "title": "Task 83",
+      "description": "Generated task 83",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-07-30",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "d6b223e0-3ec7-4cdc-99c1-ab66d0e11b5e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "70dc40b3-e83f-4248-8baa-efa9bbe84932",
+      "title": "Task 84",
+      "description": "Generated task 84",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-01-26",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "fbefcb8f-2c0f-470c-b1ae-59f550bd76db",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9f5693dc-c699-424d-9532-3fdf2b6d2f40",
+      "title": "Task 85",
+      "description": "Generated task 85",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-01-05",
+      "assignedTo": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "ab0fdc92-5083-414e-a2f8-7a8800e533f9",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "02394d16-4171-4393-a945-9efb5245dcc3",
+      "title": "Task 86",
+      "description": "Generated task 86",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-04-27",
+      "assignedTo": "u3",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "68283806-75b7-4269-9cc6-26bd2945a930",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "86121089-98d9-42e1-9264-9db1a651c12b",
+      "title": "Task 87",
+      "description": "Generated task 87",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-11-26",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "ea63d022-716c-4f22-8626-a48ce439dbcf",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "de9ac6e6-2053-4c27-8173-7fa9f93cbc31",
+      "title": "Task 88",
+      "description": "Generated task 88",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-11-23",
+      "assignedTo": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "9ab2e20e-3cd6-443c-9069-eb4e40e6e741",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "fe1834f6-1bd1-4df7-bb9c-e6288f79b9b8",
+      "title": "Task 89",
+      "description": "Generated task 89",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-07-17",
+      "assignedTo": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "8782d44a-ee72-4665-ab12-2cdcc3a1879f",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "323643d9-2bb3-4a17-8a29-90164a47f889",
+      "title": "Task 90",
+      "description": "Generated task 90",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-11-19",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "e9b0552b-553a-466d-97e9-9dc6e4a1acd9",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1eca62f2-7e14-4c73-8cfb-dc23ccc863e1",
+      "title": "Task 91",
+      "description": "Generated task 91",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-09-24",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "77088f4e-99af-4f64-a9e9-0c187a92cbc1",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f6dbab96-5d2e-434e-bf95-8e8793bf0676",
+      "title": "Task 92",
+      "description": "Generated task 92",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-04-05",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "2b0f5dbf-bdaa-4bf1-a1c8-688e77b5ebb5",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "78c5c2d3-c95a-4d75-a7f5-892d942b911b",
+      "title": "Task 93",
+      "description": "Generated task 93",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-11-28",
+      "assignedTo": "u2",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "5ee4540d-a9a4-4e48-9b98-75fb73c10cf6",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5012e8c7-16b1-48ea-87ae-03c1ad5b4890",
+      "title": "Task 94",
+      "description": "Generated task 94",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-07-23",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "9949897e-b1d4-4164-87f4-6fa9989f5e92",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b67051d6-ec2b-4f17-ab8b-fae4eef26eb3",
+      "title": "Task 95",
+      "description": "Generated task 95",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-04-17",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "1cd75399-25c9-4d35-9f21-323f83b4e228",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "2bffd97a-fa89-446a-a6df-8ea5a31827c0",
+      "title": "Task 96",
+      "description": "Generated task 96",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-09-16",
+      "assignedTo": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "30279b04-2d1c-4dd9-97d5-86d6cdab99e9",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "75e46745-c20c-4762-8bc5-d8b485d0006e",
+      "title": "Task 97",
+      "description": "Generated task 97",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-02-27",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "f6cf39be-b7b7-4685-b07d-5d5d103da4b7",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9c3559b4-2478-4462-a8fd-c8adca7f4884",
+      "title": "Task 98",
+      "description": "Generated task 98",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-06-21",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "55f27b61-8aad-490e-9fed-0b9e6f802de6",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "acd0bf86-cd2e-4843-83c0-f1b535d1e0ef",
+      "title": "Task 99",
+      "description": "Generated task 99",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-06-04",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "8fb26900-aca2-4f14-ac7f-ecd757eefdfe",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "74a49231-5c3e-45f7-b1c4-b92a157191ec",
+      "title": "Task 100",
+      "description": "Generated task 100",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-12-28",
+      "assignedTo": "u1",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "ddb06f82-60d0-4a5b-98ea-6517bf238a5a",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "153c9f8f-fe15-41dd-a658-d8867e928bfc",
+      "title": "Task 101",
+      "description": "Generated task 101",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-05-28",
+      "assignedTo": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "bf5a0a0d-09ed-4904-b6ba-a86f93215d26",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "281706f5-7bd0-4ad1-98b5-14c18fe583a2",
+      "title": "Task 102",
+      "description": "Generated task 102",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-09-15",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "68f9454e-4ad5-4bdd-a56e-e6554ef4a5e8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "ddd86565-12f1-4a62-9658-375417e60fa7",
+      "title": "Task 103",
+      "description": "Generated task 103",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-07-08",
+      "assignedTo": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "7e9d6c18-b3a9-4b91-8543-449a3e61586d",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "8a36c500-0796-46f3-a071-aae2e7c49938",
+      "title": "Task 104",
+      "description": "Generated task 104",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-09-11",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "9a23624a-5b6a-4ebe-97d6-249afc49fbe7",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "46b3f3b7-5ba9-45b0-aca9-67209b56f64c",
+      "title": "Task 105",
+      "description": "Generated task 105",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-08-18",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "fb89e7f9-b67c-4e1b-97db-6109e7a558a7",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7588d9b1-576b-4826-89cc-58bc22769ec3",
+      "title": "Task 106",
+      "description": "Generated task 106",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-06-30",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "9113ecc4-c120-4300-a054-9d069a98704b",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "54c50c95-a678-4f13-b2a2-b1c0532d5066",
+      "title": "Task 107",
+      "description": "Generated task 107",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-08-14",
+      "assignedTo": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "d2137e36-5816-4b24-89e0-0f78b758ee9d",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1f0d2a0b-7726-46d2-a869-3c5a3c681b4f",
+      "title": "Task 108",
+      "description": "Generated task 108",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-10-23",
+      "assignedTo": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "3dd858d1-f4a3-4629-a918-d8d7dd90ec3b",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b362e4ce-792e-4540-927d-48e80ff400dd",
+      "title": "Task 109",
+      "description": "Generated task 109",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-03-07",
+      "assignedTo": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "f732a78c-3b08-4db0-a2c0-f20c60998613",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c036b210-df39-4d96-897e-0b52eecb1e65",
+      "title": "Task 110",
+      "description": "Generated task 110",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-01-07",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "207b0fd5-c8bf-4609-80d9-d5b78b428943",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "bf9dcbfb-9671-4f74-a8a2-9cd8c453d382",
+      "title": "Task 111",
+      "description": "Generated task 111",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-11-28",
+      "assignedTo": "u2",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "932d82c3-0164-4efd-9a17-f8a1886c1e07",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "32405a19-0c16-401e-bb7a-ec6b696a1a41",
+      "title": "Task 112",
+      "description": "Generated task 112",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-05-08",
+      "assignedTo": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "fcda9ec6-e442-40de-8339-f8da59e1ff94",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "08eaad7a-446e-444f-b88d-d957bd3e4a07",
+      "title": "Task 113",
+      "description": "Generated task 113",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-03-07",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "7953688d-e300-4931-b075-074295818ae1",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5fe6244a-65a1-48e2-a258-7de2fa16f3f2",
+      "title": "Task 114",
+      "description": "Generated task 114",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-12-30",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "0e0a3e49-bc1f-43d9-86a3-0e9dc12538b8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "aac5316c-a8ac-48fa-afb3-21e981e96730",
+      "title": "Task 115",
+      "description": "Generated task 115",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-10-28",
+      "assignedTo": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "585abb53-1d2c-4aa1-ab4c-5fc784fcf1ef",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "206ca382-11bf-4ea4-b746-c622f8a25df3",
+      "title": "Task 116",
+      "description": "Generated task 116",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-02-05",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "23e0c011-5871-41a6-8cea-bb2d60661db6",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5cac4f71-7823-40b8-b35e-8a5295f88a1a",
+      "title": "Task 117",
+      "description": "Generated task 117",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-06-27",
+      "assignedTo": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "7edbb69c-4711-48a0-bfde-3d55b59f0ec5",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f4ba86fd-bda7-493b-a3b9-3119120ee8d2",
+      "title": "Task 118",
+      "description": "Generated task 118",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-11-05",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "b0c925b9-9b3a-4dd4-9c66-fddae3d32b66",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b4a971ed-a630-4ae2-8528-d3a5c27fbae7",
+      "title": "Task 119",
+      "description": "Generated task 119",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-09-22",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "bf858931-7085-40db-9bff-ad4be3efa8da",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5d85040d-6669-4606-bad4-75dbe1245271",
+      "title": "Task 120",
+      "description": "Generated task 120",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-05-16",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "04b05451-0085-41d6-bcac-aae4d18b922c",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "dd898c87-dfb4-4269-8d60-f97ce672e412",
+      "title": "Task 121",
+      "description": "Generated task 121",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-02-14",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "a29f2824-bdd8-4cd4-a4c6-82780fce6df1",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d87f9859-d4d9-4625-a77c-42d24938e5a0",
+      "title": "Task 122",
+      "description": "Generated task 122",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-01-04",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "f85ad1db-d116-41b3-a0f8-93814fb9c4dd",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c3a19864-b4cb-4d19-b72b-703e41a499b3",
+      "title": "Task 123",
+      "description": "Generated task 123",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-07-21",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "3312046e-0c67-41d1-95f3-020d6edb92c7",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9282c289-e30e-4d0e-ba70-828fc3db8090",
+      "title": "Task 124",
+      "description": "Generated task 124",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-01-31",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "14028759-f74e-424f-98fa-4f48d68dc1a9",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b8c1c2f0-a01c-4b49-8306-032c8c876b9a",
+      "title": "Task 125",
+      "description": "Generated task 125",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-05-31",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "e61cf9ee-c9a2-4551-aedd-b4e27021bf87",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "8d52450b-bf34-4d1e-afa6-1714181c7c22",
+      "title": "Task 126",
+      "description": "Generated task 126",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-01-11",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "5cacea25-a643-4e05-a1af-8037fb3ce46c",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3c35dbe8-1903-4808-a63c-5790a2d1f85d",
+      "title": "Task 127",
+      "description": "Generated task 127",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-09-24",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "6abca99b-7edf-4cfc-8c33-30f564a014ce",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "b92559b1-0013-4ce8-ad5e-039b427e2fb7",
+      "title": "Task 128",
+      "description": "Generated task 128",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-06-28",
+      "assignedTo": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "bf948bda-f26d-447d-a656-e12744926f25",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "34078ed5-677a-4f34-b70e-49f5d2d9af49",
+      "title": "Task 129",
+      "description": "Generated task 129",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-06-28",
+      "assignedTo": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "c5973e2e-0f23-4b29-937f-ba634f4ff9d4",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d8cfa8cf-a2a0-42b1-8481-42b1fb9f2ef8",
+      "title": "Task 130",
+      "description": "Generated task 130",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-11-03",
+      "assignedTo": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "9d64e2f1-4628-4bf3-affd-26eeab3f9771",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1054bc51-e604-4751-b6ee-3a8d2302a9e9",
+      "title": "Task 131",
+      "description": "Generated task 131",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-11-03",
+      "assignedTo": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "7b0efd17-0a8b-430f-a108-d34f88eedf25",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d6e98d96-f2f6-49f0-997a-037d1c7ade10",
+      "title": "Task 132",
+      "description": "Generated task 132",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-10-26",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "bab52749-fdcd-438a-b750-88131db2f135",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3cc2d63b-d80f-429e-8097-c0a3651dd99d",
+      "title": "Task 133",
+      "description": "Generated task 133",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-03-10",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "b2849c47-cdae-4bb8-be05-5ed577765237",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "dbf49120-ab48-4a8a-b628-c254109f1574",
+      "title": "Task 134",
+      "description": "Generated task 134",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-05-15",
+      "assignedTo": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "e1e01a7a-3ee8-4be2-b99e-9f35f6125906",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7e0fb898-e550-40a0-979b-42d577a24a0e",
+      "title": "Task 135",
+      "description": "Generated task 135",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-07-17",
+      "assignedTo": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "a046e722-0e98-4179-b7ae-247c6ee7022e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a219d797-7403-4263-8fe3-131e88583deb",
+      "title": "Task 136",
+      "description": "Generated task 136",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-08-01",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "78ecdba3-50fa-4860-b92a-47e3a66f5474",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c906582f-e464-4b8a-928d-435ae4e80dee",
+      "title": "Task 137",
+      "description": "Generated task 137",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-10-01",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "d0a06851-e4a5-4ad9-9829-1ecb273fec94",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3815a0db-bb07-4e57-a534-f5275f373c21",
+      "title": "Task 138",
+      "description": "Generated task 138",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-04-09",
+      "assignedTo": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "8d1ac218-d160-4f10-a57d-5539a819ae34",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "4cbe2b82-4659-4644-aa75-809902f620b6",
+      "title": "Task 139",
+      "description": "Generated task 139",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-08-06",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "ec750782-0e6b-4c26-ad27-843a29fb50d5",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "8dd4a500-1a21-4d69-bf7f-4113c67def74",
+      "title": "Task 140",
+      "description": "Generated task 140",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-08-12",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "8cf81e46-0d34-4884-a27d-1d9fbd24fbdc",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f6de885f-d7e1-4cd0-b9aa-a8d19581a24a",
+      "title": "Task 141",
+      "description": "Generated task 141",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-06-02",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "5e2fd42f-c6bb-448a-9d81-e3a87f3c9edc",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0b974a89-f597-4d04-9dcd-3185c2a8fe75",
+      "title": "Task 142",
+      "description": "Generated task 142",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-07-17",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "02186c50-d949-4a73-8982-606ad7fddf3a",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "03ea90b4-212a-4bcb-a39d-83694b1991aa",
+      "title": "Task 143",
+      "description": "Generated task 143",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-02-02",
+      "assignedTo": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "25098ac7-5fdf-420e-81df-ec6c22ab28a2",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "aedd61b0-6d98-4fb9-88a9-cfc6dc1250e6",
+      "title": "Task 144",
+      "description": "Generated task 144",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-02-15",
+      "assignedTo": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "e07ab6d9-0130-4542-a651-05c49097e865",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d839d555-9723-470c-87ed-3c70a9bd7bc3",
+      "title": "Task 145",
+      "description": "Generated task 145",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-08-06",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "6101947a-312a-4f9e-a52b-19483f6521d7",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "10ef0d96-3e51-4989-98b3-7cb2aa95029f",
+      "title": "Task 146",
+      "description": "Generated task 146",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-08-20",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "6e4914f6-5c6b-419f-9779-a7a17ba64d57",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1aedadd9-a464-42c6-8a1e-dbea8248964f",
+      "title": "Task 147",
+      "description": "Generated task 147",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-02-14",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "f7222e65-a414-4bc2-ae89-d587b50ea40d",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "bd788fb4-f3d8-459a-99de-c2b2aa3ead9b",
+      "title": "Task 148",
+      "description": "Generated task 148",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-04-19",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "738e8777-7dc5-4821-ac01-73d4534bbdfb",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d73e6585-899c-450a-a642-99d49aac5886",
+      "title": "Task 149",
+      "description": "Generated task 149",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-06-14",
+      "assignedTo": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "2a46d16e-49e7-44a8-a916-1647569aac9f",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "44345fe8-18ee-44a0-8239-fe4675677098",
+      "title": "Task 150",
+      "description": "Generated task 150",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-11-14",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "e73f9ee6-e707-411a-adf7-2a0a2a600a2f",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7fdb86af-8cf6-4dff-a0b7-a734aaf1cd53",
+      "title": "Task 151",
+      "description": "Generated task 151",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-01-05",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "d5f8988a-e2d9-4bd9-8250-2d4624022104",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "e5445122-eeae-4370-8d93-cc2e665b3f51",
+      "title": "Task 152",
+      "description": "Generated task 152",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-03-27",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "e6d2a36e-18c7-44e8-9d7a-2e4d99999313",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9084d578-368e-45e5-bdd8-3810057dacd7",
+      "title": "Task 153",
+      "description": "Generated task 153",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-03-19",
+      "assignedTo": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "29fba21f-4c54-4f59-b882-4657e510324b",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "08ca052c-e9e8-4701-95fb-054eff1f6bfc",
+      "title": "Task 154",
+      "description": "Generated task 154",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-10-06",
+      "assignedTo": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "f740719f-c684-4fc1-94e6-ef072052a9f4",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "2dc3d238-7827-4e84-9fe4-b3ea262c752a",
+      "title": "Task 155",
+      "description": "Generated task 155",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-11-24",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "9d4a8631-0847-45a8-9005-14f4f26c7ac3",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7eb77b72-6d73-475d-8dee-2c217910d363",
+      "title": "Task 156",
+      "description": "Generated task 156",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-05-30",
+      "assignedTo": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "8ccfcaf1-4d01-46bd-8cca-1d9f4efdec1e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "af12b6e8-ea0d-4ee6-a931-3f02a032687d",
+      "title": "Task 157",
+      "description": "Generated task 157",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-02-12",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "ff796199-8e64-476a-a524-6a0a908f16e2",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "7c5b8522-1728-4dfe-86ed-cc841f55ad98",
+      "title": "Task 158",
+      "description": "Generated task 158",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-01-08",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "5735bc3d-8e9b-45bc-90ba-1484fb3aa5ad",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "15d6f7b8-a0bc-419b-a9b1-368be211b355",
+      "title": "Task 159",
+      "description": "Generated task 159",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-11-27",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "152dda70-f86f-41fc-ba3b-59f6999d7939",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "cd73660e-8e04-4b6f-9957-b2216998fcbd",
+      "title": "Task 160",
+      "description": "Generated task 160",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-11-10",
+      "assignedTo": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "dec085db-f55e-4b75-99eb-0cdf34a2005a",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d87b8954-d376-497e-8281-1a82d3de708c",
+      "title": "Task 161",
+      "description": "Generated task 161",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-04-09",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "456498cf-e589-488d-9897-bf71c9761f8a",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f097ac30-1cf9-41b0-aa8b-ebd06a1abffd",
+      "title": "Task 162",
+      "description": "Generated task 162",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-12-01",
+      "assignedTo": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "077d5ae5-8f94-4a0e-b463-1a175e6dfa56",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "69b2eb60-c6ee-4c0a-ae3f-6ce166aeb310",
+      "title": "Task 163",
+      "description": "Generated task 163",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-05-15",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "9e80832f-f568-48f5-89e1-623169156dae",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "69bb1c1e-2227-451d-9060-4e67d0b73aea",
+      "title": "Task 164",
+      "description": "Generated task 164",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-02-26",
+      "assignedTo": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "2a4528be-43bd-4dd4-bdc8-46cae0d469f3",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "6d1e9e9d-ee7f-4408-b035-aa1a6efc8db6",
+      "title": "Task 165",
+      "description": "Generated task 165",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-05-26",
+      "assignedTo": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "2cf07978-427d-4026-a3a3-4de092e77b69",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "624e7735-0b96-42c7-934e-ea3ad9fb2ff2",
+      "title": "Task 166",
+      "description": "Generated task 166",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-12-16",
+      "assignedTo": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "7e08958e-a806-4b73-8f79-d37765161777",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "784ac531-1000-447c-ab69-604e2a9acbc0",
+      "title": "Task 167",
+      "description": "Generated task 167",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-06-28",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "966e9937-f334-448e-a0fd-80d083f9b060",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "32409ab1-fee9-4e8f-969c-fdb335ce4f3f",
+      "title": "Task 168",
+      "description": "Generated task 168",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-09-13",
+      "assignedTo": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "0658a676-f905-4b12-b5ad-3823c56572e1",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "96b31146-57ca-4be0-8021-c9fcf9c126d8",
+      "title": "Task 169",
+      "description": "Generated task 169",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-09-08",
+      "assignedTo": "u1",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "fc90688d-a053-48d1-845b-9bc6fc9788e8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "82452ba7-cbbb-4285-b4e5-564376c2c687",
+      "title": "Task 170",
+      "description": "Generated task 170",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-01-26",
+      "assignedTo": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "081ac37f-e24d-4b61-ae15-36c26ee146d8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "fb5ed1db-f6df-4cd9-92aa-d101f9b631b9",
+      "title": "Task 171",
+      "description": "Generated task 171",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-12-29",
+      "assignedTo": "u2",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "0687e49a-50d2-4efc-8faa-029c9f0327f5",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "254407de-5964-4bfa-9d05-860c015cd552",
+      "title": "Task 172",
+      "description": "Generated task 172",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-03-03",
+      "assignedTo": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "3e8e1318-6495-480f-ae50-318c9ddefd3e",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c2b61172-4a85-4b86-9101-725aaeb7ba73",
+      "title": "Task 173",
+      "description": "Generated task 173",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-11-10",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "36b53d41-4d7b-4169-b540-de814ab0bc39",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "8be564ed-0d52-44ce-b5ee-61a5a606ceeb",
+      "title": "Task 174",
+      "description": "Generated task 174",
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "2026-09-29",
+      "assignedTo": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "157293bf-c2f4-44dc-9589-00f4c6fdb67b",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a2c8b600-715a-4b63-80ab-e9b721b9e449",
+      "title": "Task 175",
+      "description": "Generated task 175",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-07-14",
+      "assignedTo": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "eee0c74a-d4d5-43c7-89c0-8c9f8d6e92ef",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "90475457-8ad1-4078-8d57-940b978717ee",
+      "title": "Task 176",
+      "description": "Generated task 176",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-12-12",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "06f56f08-8236-44cf-b617-ef2ab5bd9015",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "556a8b24-8f30-4132-b255-53002ef28018",
+      "title": "Task 177",
+      "description": "Generated task 177",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-02-22",
+      "assignedTo": "u3",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "6152ec33-b8be-4ab3-96de-08ccbd9d0b01",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "d359fbd3-63cd-42c7-a677-049752090abb",
+      "title": "Task 178",
+      "description": "Generated task 178",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-01-05",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "db837dbb-0de9-4a66-8d7c-8cb9a7cf56a0",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "655691f2-cc83-4219-951a-86f9c63fd622",
+      "title": "Task 179",
+      "description": "Generated task 179",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-06-10",
+      "assignedTo": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "65345236-4004-42dd-821c-18374bec7547",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "fb358f87-6cc4-4b3e-bb8a-0878114a634b",
+      "title": "Task 180",
+      "description": "Generated task 180",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-11-13",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "02383006-cc9a-4807-87da-1114245c7e8d",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "8295139b-12b0-442d-bd9c-436b3855bb49",
+      "title": "Task 181",
+      "description": "Generated task 181",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-12-17",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "784bf974-d5aa-4f5b-897c-3824e6e141e1",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9d7a55cc-50eb-4225-9790-c922267bd685",
+      "title": "Task 182",
+      "description": "Generated task 182",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-06-08",
+      "assignedTo": "u2",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "3a7fc30a-7495-444c-85b5-fd0592d1cdb8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "04b789e3-4237-4e69-8146-e253d42d21dc",
+      "title": "Task 183",
+      "description": "Generated task 183",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-01-12",
+      "assignedTo": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "a4b95ac2-e2b0-4747-8d72-b4ffe8337529",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "20ded6ac-2325-4415-b5df-151e0ccbb43c",
+      "title": "Task 184",
+      "description": "Generated task 184",
+      "status": "todo",
+      "priority": "low",
+      "dueDate": "2026-12-18",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "58c840be-0c02-4c12-9189-ae52175d1d00",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "a5fe848f-9f83-46c6-89fb-cc6595f8ea45",
+      "title": "Task 185",
+      "description": "Generated task 185",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-08-16",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "643a6400-ec1c-4e89-afbc-ba585e726421",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "82cb45f3-438b-4271-80ad-8986a184db68",
+      "title": "Task 186",
+      "description": "Generated task 186",
+      "status": "done",
+      "priority": "medium",
+      "dueDate": "2026-10-05",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "a2eaf4cb-734e-4281-b16b-36b0244cbe01",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "05d958c9-685d-43fc-8fec-5a1f491ff545",
+      "title": "Task 187",
+      "description": "Generated task 187",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-07-27",
+      "assignedTo": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "8a8eee67-5e96-4a33-92a8-24a96d880014",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "6ff3cce3-b742-488e-9528-7612e4363bf3",
+      "title": "Task 188",
+      "description": "Generated task 188",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-07-20",
+      "assignedTo": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "aec21d4b-8364-4ac6-81db-296aab7aa718",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "51664781-21dc-48d7-93ae-f8e4b00c6c72",
+      "title": "Task 189",
+      "description": "Generated task 189",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-11-11",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "b9694d64-be04-4b3d-89de-91118b6baa30",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "f5271dfa-d577-4e18-8a47-c3f176b7e5f1",
+      "title": "Task 190",
+      "description": "Generated task 190",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-12-13",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "fdc0fab1-7705-4d6d-bc48-9d2892fcbdf8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "0ec1e2b4-1ad4-4936-9747-c595f7e0688d",
+      "title": "Task 191",
+      "description": "Generated task 191",
+      "status": "in-progress",
+      "priority": "low",
+      "dueDate": "2026-12-01",
+      "assignedTo": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "977c0354-e7c6-4ef9-906d-237786aaaad4",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "e11b2e9d-9288-400f-8f28-b974314df0ce",
+      "title": "Task 192",
+      "description": "Generated task 192",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-04-06",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "66015761-948d-4638-a909-df594788241b",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "1a9e5fb5-d077-4424-96c5-0862f863f3a9",
+      "title": "Task 193",
+      "description": "Generated task 193",
+      "status": "todo",
+      "priority": "high",
+      "dueDate": "2026-11-12",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "f3e80666-b85f-40d2-9475-3c3d1fabc4e6",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "3798a426-b571-4caf-8372-f649d0c504c8",
+      "title": "Task 194",
+      "description": "Generated task 194",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-06-20",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "02d22bf7-57e2-43ee-860b-e2454e399db1",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "41021a37-83df-47ca-b31d-3606ae0f5cd0",
+      "title": "Task 195",
+      "description": "Generated task 195",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-11-10",
+      "assignedTo": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "e1893e91-b89a-490a-adc6-5c0e8a2bf6a8",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "ca9fe21f-96a0-4033-9ec8-c130c6669cf2",
+      "title": "Task 196",
+      "description": "Generated task 196",
+      "status": "done",
+      "priority": "low",
+      "dueDate": "2026-06-17",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "8392db58-f187-44fa-800f-38e70142213f",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c025cb08-ed24-4d1a-a99f-bd46a49d0c26",
+      "title": "Task 197",
+      "description": "Generated task 197",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-08-28",
+      "assignedTo": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "5ed21443-6d85-44b7-8b9f-641827584aa4",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "61f6a934-a336-40a3-9997-302859b294fd",
+      "title": "Task 198",
+      "description": "Generated task 198",
+      "status": "done",
+      "priority": "high",
+      "dueDate": "2026-07-19",
+      "assignedTo": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "134f9278-7f48-4f10-a6a0-088b5816f814",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "c95a5bb8-53ea-42ee-acc0-c79d8bdce4eb",
+      "title": "Task 199",
+      "description": "Generated task 199",
+      "status": "failed",
+      "priority": "low",
+      "dueDate": "2026-02-01",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "e21117fc-bd18-4eac-b18e-4122836b1f6b",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "5c4c71ba-fe6c-4e47-88b1-2d534bb48d21",
+      "title": "Task 200",
+      "description": "Generated task 200",
+      "status": "failed",
+      "priority": "high",
+      "dueDate": "2026-07-10",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "d3fa77a2-b93a-4783-bfbc-4ed321d0ace5",
+          "at": "2026-02-03T23:13:33.152Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded task"
+        }
+      ]
+    },
+    {
+      "id": "9ae35de2-0e87-44c2-9c1a-e948645a27f4",
+      "title": "New task to check Notification",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-02-28",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "description": "Testing",
+      "leadId": "4bc369ae-7538-46de-9898-b95f74e3f20f",
+      "tags": [],
+      "activity": [
+        {
+          "id": "b15b8d3e-ca53-4019-924b-c54636cbdf3d",
+          "at": "2026-02-03T23:40:39.124Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Task created by admin@example.com"
+        }
+      ]
+    },
+    {
+      "id": "d8415767-076a-45a7-98c2-5cf040d27506",
+      "title": "Again, notification issue",
+      "status": "todo",
+      "priority": "medium",
+      "dueDate": "2026-03-02",
+      "assignedTo": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "description": "test issue",
+      "leadId": "5db257dd-9329-4097-b4b3-994e10e49b67",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "6467d5ae-8bb8-4b20-9d97-fc4712df40b6",
+          "at": "2026-02-03T23:49:15.325Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Task created by admin@example.com"
+        }
+      ]
+    },
+    {
+      "id": "2b3d3572-55de-4323-a04a-1f4317b84932",
+      "title": "New Task for Assignment",
+      "status": "failed",
+      "priority": "medium",
+      "dueDate": "2026-02-05",
+      "assignedTo": "13fba763-53b4-493d-b176-a54a0070593f",
+      "description": "Testing for SME",
+      "leadId": "53bc9762-2cf7-4468-a241-4662d42779b8",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "a0fded16-a5a7-4474-aa55-2c1545cd2cf9",
+          "at": "2026-02-04T02:59:11.525Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Task created by admin@example.com"
+        },
+        {
+          "id": "17514568-48af-494f-b014-5b4c937e785e",
+          "at": "2026-02-04T03:02:54.220Z",
+          "by": "13fba763-53b4-493d-b176-a54a0070593f",
+          "action": "updated",
+          "summary": "Status changed to failed"
+        }
+      ],
+      "reason": "NOT INTERESTED",
+      "attachment": {
+        "filename": "Uploaded image.png",
+        "url": "/uploads/1770174174216-Uploaded_image.png",
+        "mime": "image/png"
+      }
     }
   ],
   "leads": [
@@ -98,6 +4396,2042 @@
       "phone": "0987654321",
       "stage": "contacted",
       "owner": "u3"
+    },
+    {
+      "id": "0fac5a67-cb53-417c-afdc-66915b8bbb8f",
+      "name": "Lead 1",
+      "email": "lead1@example.com",
+      "phone": "9000000001",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "f5a68c34-6ef9-47a4-b1b2-9b82c656adc5",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "9dbc7ffe-7365-4384-8b27-fc8fb71e2fde",
+      "name": "Lead 2",
+      "email": "lead2@example.com",
+      "phone": "9000000002",
+      "stage": "contacted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "ea4a0204-eb31-4629-a924-1806d5d62c9e",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "a4592596-b069-4809-8a07-530b03a528ab",
+      "name": "Lead 3",
+      "email": "lead3@example.com",
+      "phone": "9000000003",
+      "stage": "contacted",
+      "owner": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "da84313c-72e2-4fd4-885e-e1b71f2160e2",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "de3b22d8-6275-4133-bba3-0730073d2b67",
+      "name": "Lead 4",
+      "email": "lead4@example.com",
+      "phone": "9000000004",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "bbe745ba-c3da-47e9-be9a-3a67ac22bc3c",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "b22bd42b-2e2d-4f6c-bf1c-b9755e6ebaae",
+      "name": "Lead 5",
+      "email": "lead5@example.com",
+      "phone": "9000000005",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "7ca10434-1cef-4726-a526-5854e82717c1",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "840edd07-9afd-4862-933e-cf8716e18116",
+      "name": "Lead 6",
+      "email": "lead6@example.com",
+      "phone": "9000000006",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "0d0118fb-4786-44bb-8bcd-eaca69e082ea",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "d0e0bb5f-d03e-4cdb-ad33-4bebaa0e3bb0",
+      "name": "Lead 7",
+      "email": "lead7@example.com",
+      "phone": "9000000007",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "238389e3-fa32-4351-9810-83c18a396248",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "49b15f97-36ef-41c8-b3df-5352018a2b30",
+      "name": "Lead 8",
+      "email": "lead8@example.com",
+      "phone": "9000000008",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "cf98777c-1232-4207-a43e-c6a3c5910561",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "874fa0d6-b1c9-4b35-a4f7-56cace25f05d",
+      "name": "Lead 9",
+      "email": "lead9@example.com",
+      "phone": "9000000009",
+      "stage": "new",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "cbe713bd-3b19-43e5-825e-8a9857b8639b",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "ab256493-1985-4213-a53b-7934eb44b8e2",
+      "name": "Lead 10",
+      "email": "lead10@example.com",
+      "phone": "9000000010",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "1943e267-c055-4f35-86ad-30f7b0bc9342",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "e97db5fe-ae98-40dc-9b30-ca6441605e2d",
+      "name": "Lead 11",
+      "email": "lead11@example.com",
+      "phone": "9000000011",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "0dd25755-33ba-4d5a-9ecb-9a6e93a18c68",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "e59b2473-6e6f-4ee6-98c9-54692eaacb9b",
+      "name": "Lead 12",
+      "email": "lead12@example.com",
+      "phone": "9000000012",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "50d3e6dc-4442-472c-9736-6eeab0e522d6",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "4bc369ae-7538-46de-9898-b95f74e3f20f",
+      "name": "Lead 13",
+      "email": "lead13@example.com",
+      "phone": "9000000013",
+      "stage": "new",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "cf39fbd4-f192-4d78-923f-534ee7b74603",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "30b64019-f8e3-4e28-9b2b-300c4bee857a",
+      "name": "Lead 14",
+      "email": "lead14@example.com",
+      "phone": "9000000014",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "73fa290b-16ad-44cb-8a30-4658c28560de",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "af7b29fb-853d-4eac-b259-4c76f3638007",
+      "name": "Lead 15",
+      "email": "lead15@example.com",
+      "phone": "9000000015",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "88c0e7d5-1f88-4a6d-be62-b3c793e40137",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "038ae436-09cb-491d-a77c-c3ff13e9ebbf",
+      "name": "Lead 16",
+      "email": "lead16@example.com",
+      "phone": "9000000016",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "45e4eeee-33cb-45b0-95de-9dcf25df66ba",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "8ff4abcb-f96a-4de3-8a66-7d24bcc52830",
+      "name": "Lead 17",
+      "email": "lead17@example.com",
+      "phone": "9000000017",
+      "stage": "converted",
+      "owner": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "91840731-ef4b-4c00-84c9-eb9101fa87f8",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "5db257dd-9329-4097-b4b3-994e10e49b67",
+      "name": "Lead 18",
+      "email": "lead18@example.com",
+      "phone": "9000000018",
+      "stage": "contacted",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "ca8e2b99-145d-45c1-a7be-b5fadf8960bb",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "fe522e26-a639-415d-9ec9-7e0c1320b288",
+      "name": "Lead 19",
+      "email": "lead19@example.com",
+      "phone": "9000000019",
+      "stage": "contacted",
+      "owner": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "a0c3f725-1e88-47cc-bd94-b05bdefc685d",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "19f53a8d-7a9d-468e-9901-a9c63c3dd196",
+      "name": "Lead 20",
+      "email": "lead20@example.com",
+      "phone": "9000000020",
+      "stage": "new",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "199f2df3-41d9-425e-b6ff-87db9a52cad6",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "59a648f2-9e23-46e6-a997-28ba9eca18a1",
+      "name": "Lead 21",
+      "email": "lead21@example.com",
+      "phone": "9000000021",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "c60f7114-21da-4b80-88dc-04a144d34abd",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "3d158516-8a70-4e21-8acd-c4b3e72afe8f",
+      "name": "Lead 22",
+      "email": "lead22@example.com",
+      "phone": "9000000022",
+      "stage": "contacted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "ab77e59b-0d22-4c9d-ac39-fbd6bafcdee6",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "2d0854e8-cd45-45c7-8863-2f509b38c44d",
+      "name": "Lead 23",
+      "email": "lead23@example.com",
+      "phone": "9000000023",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "9783af0e-148c-45ba-8172-92ea2bd3f39b",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "8d67ee0c-0895-4e6d-8868-c979b8e0ab05",
+      "name": "Lead 24",
+      "email": "lead24@example.com",
+      "phone": "9000000024",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "dff6b6c2-3f1a-490c-8574-01120299feae",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "67dd365a-b8c2-4a54-83a6-057fc2ca383c",
+      "name": "Lead 25",
+      "email": "lead25@example.com",
+      "phone": "9000000025",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "1c7567ae-8935-4dc1-8183-09507a62ffad",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "86498e1c-db63-4a41-8c6d-4d782374f96f",
+      "name": "Lead 26",
+      "email": "lead26@example.com",
+      "phone": "9000000026",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "ca2e7436-318e-4ea0-af14-26b5a497dd8b",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "9714b4c2-a92a-4184-8f4d-e082666e0e16",
+      "name": "Lead 27",
+      "email": "lead27@example.com",
+      "phone": "9000000027",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "d29e2503-0226-4789-afec-0558b7db0238",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "d71ef429-08c0-4f5c-94bc-51a2ff7b47f8",
+      "name": "Lead 28",
+      "email": "lead28@example.com",
+      "phone": "9000000028",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "8d4e4aa5-caa3-4455-80c7-cb825115becd",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "bb012dfe-d161-4083-ae00-758a49efe94d",
+      "name": "Lead 29",
+      "email": "lead29@example.com",
+      "phone": "9000000029",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "0aae0a0a-141c-4e2c-bf56-a5979b756c28",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "c11e251c-ad5e-4bc2-90e1-1c4bdbb275d2",
+      "name": "Lead 30",
+      "email": "lead30@example.com",
+      "phone": "9000000030",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "7e5cbbc6-9727-427c-96b2-01bc46a7d53b",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "9f602f05-9fe6-497b-8c45-6c4a49d7750f",
+      "name": "Lead 31",
+      "email": "lead31@example.com",
+      "phone": "9000000031",
+      "stage": "converted",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "a767e005-a435-449f-8f31-b0694804be1d",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "532766d3-4dac-468a-82e3-97886a9ec704",
+      "name": "Lead 32",
+      "email": "lead32@example.com",
+      "phone": "9000000032",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "7b8dc1c6-ece2-451f-807a-0211f036542e",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "e5ae27b4-cf5f-4d8d-99e1-eb566c1e2299",
+      "name": "Lead 33",
+      "email": "lead33@example.com",
+      "phone": "9000000033",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "4ad93c78-d245-4336-a3b4-23b73efb832b",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "47dbd0ff-24bb-42ed-8ce0-a54b1789947d",
+      "name": "Lead 34",
+      "email": "lead34@example.com",
+      "phone": "9000000034",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "954ea3a7-1067-47aa-9f7c-f1b4f221694d",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "0d9ed697-5b90-483f-a7f5-81f6b4dc11bf",
+      "name": "Lead 35",
+      "email": "lead35@example.com",
+      "phone": "9000000035",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "608fed82-3e5e-41d0-9381-63f1340e5528",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "6ac00e5b-240f-4896-b02e-7facd8f805d1",
+      "name": "Lead 36",
+      "email": "lead36@example.com",
+      "phone": "9000000036",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "755bab54-905a-4e7c-b9d0-4ec9486478d4",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "e636f3fe-2a95-4b87-8596-91498afb48d8",
+      "name": "Lead 37",
+      "email": "lead37@example.com",
+      "phone": "9000000037",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "9c16924d-99c5-469c-86e8-f38651b8f338",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "53bc9762-2cf7-4468-a241-4662d42779b8",
+      "name": "Lead 38",
+      "email": "lead38@example.com",
+      "phone": "9000000038",
+      "stage": "contacted",
+      "owner": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "62ee3e15-7621-4ed6-b2a9-f8052f76addc",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "8af56a1b-7bca-405e-8635-aed1596f44e7",
+      "name": "Lead 39",
+      "email": "lead39@example.com",
+      "phone": "9000000039",
+      "stage": "converted",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "93864e2d-ceb0-4dcd-a5be-e6634f5f0314",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "4d414609-31ba-462d-985c-a02860e31c82",
+      "name": "Lead 40",
+      "email": "lead40@example.com",
+      "phone": "9000000040",
+      "stage": "new",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "bdca11e9-d610-407c-afd1-e30cc2508c92",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "3b41d237-adc6-4d49-a205-598effde666a",
+      "name": "Lead 41",
+      "email": "lead41@example.com",
+      "phone": "9000000041",
+      "stage": "contacted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "6ab866dd-5198-40ce-bd72-40390af912dd",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "a4401fa8-c9b2-4bb4-a6ab-6e53908504cf",
+      "name": "Lead 42",
+      "email": "lead42@example.com",
+      "phone": "9000000042",
+      "stage": "contacted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "f9d8a753-0faa-4c7e-b905-eae238c11ce2",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "3c7d4fcd-e25a-4450-866e-787e70244021",
+      "name": "Lead 43",
+      "email": "lead43@example.com",
+      "phone": "9000000043",
+      "stage": "qualified",
+      "owner": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "a3ea542b-8294-479d-a303-31e71f9284ab",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "fc745018-0e7b-4f17-9e68-0a480dd6d7fc",
+      "name": "Lead 44",
+      "email": "lead44@example.com",
+      "phone": "9000000044",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "9ddb2d26-dafc-44fd-b56b-5c801269f3b7",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "9d6cd9f1-3823-433d-a64e-bac2c3698675",
+      "name": "Lead 45",
+      "email": "lead45@example.com",
+      "phone": "9000000045",
+      "stage": "converted",
+      "owner": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "6f62a162-e288-4d25-b096-dc7a442b5652",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "e7cb3d92-2d0e-44ea-b9c4-09e8faf5daa3",
+      "name": "Lead 46",
+      "email": "lead46@example.com",
+      "phone": "9000000046",
+      "stage": "contacted",
+      "owner": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "7ba91bb7-8d2b-4b79-bd11-0d96cf848482",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "54f714b3-b949-4343-a1e0-a2b56e510192",
+      "name": "Lead 47",
+      "email": "lead47@example.com",
+      "phone": "9000000047",
+      "stage": "converted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "cbef2ff9-eee3-4528-9872-8eb902fbeda9",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "e16270dc-9810-446d-9193-355c4fd5e694",
+      "name": "Lead 48",
+      "email": "lead48@example.com",
+      "phone": "9000000048",
+      "stage": "qualified",
+      "owner": "u3",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "e865fcec-c80a-4916-a89f-fe174a0affa0",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "a5fe8bc6-bc83-4d1e-a6c2-e86e3a61de8f",
+      "name": "Lead 49",
+      "email": "lead49@example.com",
+      "phone": "9000000049",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "edd91390-da27-4bdf-8a7d-3bfdbff7d209",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "6a881f83-3f46-422e-b8d3-3cf3f36db500",
+      "name": "Lead 50",
+      "email": "lead50@example.com",
+      "phone": "9000000050",
+      "stage": "contacted",
+      "owner": "u1",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "4a1364c1-6967-4854-a245-33894ec8e170",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "3773ae71-8dae-4355-b4f6-932e46278b3f",
+      "name": "Lead 51",
+      "email": "lead51@example.com",
+      "phone": "9000000051",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "7b6d9861-9d82-4de3-a526-5f0ab7fccc0f",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "da7d520e-8e42-4bd5-88b4-c405ff5c4e40",
+      "name": "Lead 52",
+      "email": "lead52@example.com",
+      "phone": "9000000052",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "1b25f1f7-6d92-4d08-b7eb-d8343314ece0",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "b31a8256-684a-434e-9f60-57a2110216d4",
+      "name": "Lead 53",
+      "email": "lead53@example.com",
+      "phone": "9000000053",
+      "stage": "converted",
+      "owner": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "acc04639-43b7-48a4-bd87-1ce98f759ea7",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "b77eb51e-43cb-4ba5-b2d1-b70c82674c08",
+      "name": "Lead 54",
+      "email": "lead54@example.com",
+      "phone": "9000000054",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "4ea0cb96-135f-4a8e-b466-f5390b4e269b",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "65012ef3-035b-493c-b350-9e2d1cd8778f",
+      "name": "Lead 55",
+      "email": "lead55@example.com",
+      "phone": "9000000055",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "e9b57fa4-4bde-4c9c-a6d7-a07f1ccf25c8",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "c9ff4cf9-233c-4fd5-9d66-0e4c9849c4d8",
+      "name": "Lead 56",
+      "email": "lead56@example.com",
+      "phone": "9000000056",
+      "stage": "contacted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "a06c1a9c-83c6-4b53-91a4-baeb389d30fa",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "f6116872-63b3-4bfd-a589-7120c6b918a2",
+      "name": "Lead 57",
+      "email": "lead57@example.com",
+      "phone": "9000000057",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "ae436450-2092-4703-a526-9e2038b001f8",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "b569250d-72bd-4ba5-a911-ee5c20856ff2",
+      "name": "Lead 58",
+      "email": "lead58@example.com",
+      "phone": "9000000058",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "fad43169-290f-4ff4-90ab-6f9fc18892ee",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "085ad13d-b538-4049-ab12-909362b80d29",
+      "name": "Lead 59",
+      "email": "lead59@example.com",
+      "phone": "9000000059",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "30fa3f0e-2bed-4458-9356-75f7f75675fa",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "1e58f18b-df73-4a74-a6fb-4c93c324ee01",
+      "name": "Lead 60",
+      "email": "lead60@example.com",
+      "phone": "9000000060",
+      "stage": "qualified",
+      "owner": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "39a72287-a1c7-4d4d-bbd8-03b2ab734460",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "48f81db2-81ea-4847-966f-ba1438c9e9f6",
+      "name": "Lead 61",
+      "email": "lead61@example.com",
+      "phone": "9000000061",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "f5e13c14-b927-4a95-9893-6de76e07d137",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "edd25cff-f545-4d7d-a027-26b84d651ae4",
+      "name": "Lead 62",
+      "email": "lead62@example.com",
+      "phone": "9000000062",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "253ad6f5-0097-458a-97e3-ec523ba7e1e8",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "f10531ff-297b-4b85-8601-c87c1add8f28",
+      "name": "Lead 63",
+      "email": "lead63@example.com",
+      "phone": "9000000063",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "5754aadc-7e97-4096-91c7-345e9cdf8fec",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "ef57c2b1-7920-43ba-8fc0-5bc9be8ba316",
+      "name": "Lead 64",
+      "email": "lead64@example.com",
+      "phone": "9000000064",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "91b780dd-5190-42b7-b6b7-c66cb97818f1",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "961eca98-1318-483e-96eb-1b388112e586",
+      "name": "Lead 65",
+      "email": "lead65@example.com",
+      "phone": "9000000065",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "ef90b076-ed0d-4dc8-9005-5d2e67a06201",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "0418242a-8ddc-4ca7-812f-afd563ad6633",
+      "name": "Lead 66",
+      "email": "lead66@example.com",
+      "phone": "9000000066",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "9434e8ea-0ce9-4206-8bea-e0f8f801be89",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "8ab035d0-8c5d-49b2-836c-4d005c4263e7",
+      "name": "Lead 67",
+      "email": "lead67@example.com",
+      "phone": "9000000067",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "fb5ac3ab-3841-4b58-8a49-c064755c5eb2",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "792a2e83-bf1f-454e-8d6e-8931d75b8589",
+      "name": "Lead 68",
+      "email": "lead68@example.com",
+      "phone": "9000000068",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "aa81ff6a-0c19-4052-a6b1-3f447e1b3214",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "b8837d67-a90d-4c45-8041-0cda1ed11977",
+      "name": "Lead 69",
+      "email": "lead69@example.com",
+      "phone": "9000000069",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "fdb7a2e3-f3fe-4b6c-be98-aa50f29d3ad1",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "853c09aa-935d-4f94-b089-559a9570af72",
+      "name": "Lead 70",
+      "email": "lead70@example.com",
+      "phone": "9000000070",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "75c3cb34-9fba-412b-acec-06631f637713",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "82751939-b766-4c97-8cad-3c25ee80562c",
+      "name": "Lead 71",
+      "email": "lead71@example.com",
+      "phone": "9000000071",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "d48b7aeb-515d-4fed-9268-f7ac37667eb2",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "9e6f01fa-2561-4faf-83f6-1e9f6e938746",
+      "name": "Lead 72",
+      "email": "lead72@example.com",
+      "phone": "9000000072",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "a42e7bd4-0ef2-4995-b4a1-f1ae7d91dfb0",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "76558d8d-a0fb-45b0-8c60-f50fdf30f754",
+      "name": "Lead 73",
+      "email": "lead73@example.com",
+      "phone": "9000000073",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "22766ee7-aa23-4b71-ad27-73fec367c2d4",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "6935597c-581b-4f7e-9123-b031a435a02f",
+      "name": "Lead 74",
+      "email": "lead74@example.com",
+      "phone": "9000000074",
+      "stage": "contacted",
+      "owner": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "bc60917d-2180-4219-b58b-1d1352ef57e1",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "596e8d7d-d44b-4e2e-b20e-c508800ebf4c",
+      "name": "Lead 75",
+      "email": "lead75@example.com",
+      "phone": "9000000075",
+      "stage": "contacted",
+      "owner": "u3",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "35b77434-faa3-4ecc-ad79-fe8020333818",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "f3b19ee4-c088-40cd-bf4b-37ad8efd5968",
+      "name": "Lead 76",
+      "email": "lead76@example.com",
+      "phone": "9000000076",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "cfeeba39-0793-42f3-8632-d60f57b84825",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "1492ddd3-6a84-4de9-a92f-d6551a2b54e1",
+      "name": "Lead 77",
+      "email": "lead77@example.com",
+      "phone": "9000000077",
+      "stage": "contacted",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "fb06f4fc-6706-4406-b582-d83b944c9b7e",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "f6319889-1ce7-43af-b888-24953520fd6f",
+      "name": "Lead 78",
+      "email": "lead78@example.com",
+      "phone": "9000000078",
+      "stage": "converted",
+      "owner": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "d4a10668-d7a7-4bac-96a6-69da649cb534",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "2291e13e-df5e-42e2-9fa6-4e4ae6392834",
+      "name": "Lead 79",
+      "email": "lead79@example.com",
+      "phone": "9000000079",
+      "stage": "qualified",
+      "owner": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "b83fa899-9618-4b80-b05a-3e2d166a7742",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "da0aaccd-9500-49f7-9aef-1882b6fc20b3",
+      "name": "Lead 80",
+      "email": "lead80@example.com",
+      "phone": "9000000080",
+      "stage": "new",
+      "owner": "u3",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "f2cc8e83-dc14-4c17-9453-9ca2b24b9c8d",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "80f8313e-e8bc-445f-82d3-874de55b46fb",
+      "name": "Lead 81",
+      "email": "lead81@example.com",
+      "phone": "9000000081",
+      "stage": "contacted",
+      "owner": "u1",
+      "tags": [
+        "frontend"
+      ],
+      "activity": [
+        {
+          "id": "6432ed4d-1d64-49a8-ada7-7757d05a470e",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "65fe9610-0d70-4a06-b097-d7bea49426be",
+      "name": "Lead 82",
+      "email": "lead82@example.com",
+      "phone": "9000000082",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "099e41bb-67e6-4c5e-b044-cb17969bd0e2",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "39aeb0ff-7010-408c-842a-775c59c285e8",
+      "name": "Lead 83",
+      "email": "lead83@example.com",
+      "phone": "9000000083",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "4ca040b5-caf9-4e33-ac1e-3e0385688f64",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "d3302511-152f-4932-921d-5b62be755917",
+      "name": "Lead 84",
+      "email": "lead84@example.com",
+      "phone": "9000000084",
+      "stage": "converted",
+      "owner": "u3",
+      "tags": [
+        "bug"
+      ],
+      "activity": [
+        {
+          "id": "22ca6878-7474-4fd6-9fa8-741259199cdc",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "eea87aca-2027-4a85-bf83-d2eba16719c2",
+      "name": "Lead 85",
+      "email": "lead85@example.com",
+      "phone": "9000000085",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "f053713c-487d-43e9-bc1d-45b0270e7098",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "6e62fd47-91c6-4ae8-a8bd-d10f1c6685eb",
+      "name": "Lead 86",
+      "email": "lead86@example.com",
+      "phone": "9000000086",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "08ceab02-931c-465e-a234-44fb90bef3d4",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "0e6312d9-eb53-4de4-a577-0d0ba87d7389",
+      "name": "Lead 87",
+      "email": "lead87@example.com",
+      "phone": "9000000087",
+      "stage": "qualified",
+      "owner": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "08c06425-3610-462d-9ef0-271e74be21ba",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "1e22e134-5fce-4a2a-8a8e-2af6a80c6ca3",
+      "name": "Lead 88",
+      "email": "lead88@example.com",
+      "phone": "9000000088",
+      "stage": "converted",
+      "owner": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "a954ce98-8416-4e5d-9f82-06bfa117d419",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "2b16b086-aa6b-4163-8072-35774dac90da",
+      "name": "Lead 89",
+      "email": "lead89@example.com",
+      "phone": "9000000089",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "149c7c21-bb14-4807-afd4-79166f7102cc",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "5a2665e6-8eae-43fb-8e86-b6f4eb993cf9",
+      "name": "Lead 90",
+      "email": "lead90@example.com",
+      "phone": "9000000090",
+      "stage": "qualified",
+      "owner": "u1",
+      "tags": [
+        "new"
+      ],
+      "activity": [
+        {
+          "id": "528f22a2-35da-4afd-aa3d-e81f0f45a6cf",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "5cc6a722-ae2f-4452-bd1b-68664d588c8d",
+      "name": "Lead 91",
+      "email": "lead91@example.com",
+      "phone": "9000000091",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "4a9eaef3-0aaa-4b32-a180-78b00e573f7e",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "d308963b-b8f3-425b-8a45-82cd5353aec4",
+      "name": "Lead 92",
+      "email": "lead92@example.com",
+      "phone": "9000000092",
+      "stage": "converted",
+      "owner": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "f57b3ddf-aa55-4d29-8c3b-738779fc09ce",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "59e03fec-956e-4eb9-9c4a-853a58bb6086",
+      "name": "Lead 93",
+      "email": "lead93@example.com",
+      "phone": "9000000093",
+      "stage": "converted",
+      "owner": "u3",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "44b822f2-8b74-40c2-af57-a1d5ac90debf",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "022c16df-19ae-434d-9b40-198b956f21fa",
+      "name": "Lead 94",
+      "email": "lead94@example.com",
+      "phone": "9000000094",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "urgent"
+      ],
+      "activity": [
+        {
+          "id": "330cf13e-4513-4cbd-826b-e052f9ecaacf",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "0dc258a0-42d9-41f0-a530-16164ee79dbb",
+      "name": "Lead 95",
+      "email": "lead95@example.com",
+      "phone": "9000000095",
+      "stage": "qualified",
+      "owner": "u2",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "c4834d01-2864-40dd-b2ea-d36538d5529e",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "16ffd601-a8b1-4423-827d-c022bf4b1034",
+      "name": "Lead 96",
+      "email": "lead96@example.com",
+      "phone": "9000000096",
+      "stage": "contacted",
+      "owner": "u2",
+      "tags": [
+        "backend"
+      ],
+      "activity": [
+        {
+          "id": "231e3a45-6b4b-4fbb-ad0c-c304357e1fa2",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "0abb92fc-ee82-427b-91a9-c4a913314422",
+      "name": "Lead 97",
+      "email": "lead97@example.com",
+      "phone": "9000000097",
+      "stage": "qualified",
+      "owner": "u3",
+      "tags": [
+        "followup"
+      ],
+      "activity": [
+        {
+          "id": "905435f7-acfa-41cd-b782-bf26b620f0ec",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u1",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "b38b8a55-0e74-456e-b399-1340aac2b76f",
+      "name": "Lead 98",
+      "email": "lead98@example.com",
+      "phone": "9000000098",
+      "stage": "contacted",
+      "owner": "u3",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "76ec20de-be31-4345-88d6-32908ab1b5c5",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "df717fe0-0992-4797-87e5-114d8a8b5a93",
+      "name": "Lead 99",
+      "email": "lead99@example.com",
+      "phone": "9000000099",
+      "stage": "new",
+      "owner": "u2",
+      "tags": [
+        "sla"
+      ],
+      "activity": [
+        {
+          "id": "5eae8c22-8dec-4d07-9d3c-96dc36376c91",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u2",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    },
+    {
+      "id": "a515faa2-340b-4ba8-907f-17dd8cca4e10",
+      "name": "Lead 100",
+      "email": "lead100@example.com",
+      "phone": "9000000100",
+      "stage": "new",
+      "owner": "u1",
+      "tags": [
+        "vip"
+      ],
+      "activity": [
+        {
+          "id": "09b9ae66-bdfc-43bc-b0a7-9db5e40d8979",
+          "at": "2026-02-03T23:13:33.153Z",
+          "by": "u3",
+          "action": "created",
+          "summary": "Seeded lead"
+        }
+      ]
+    }
+  ],
+  "views": [],
+  "teams": [],
+  "notifications": [
+    {
+      "id": "5c8ad6a1-cbbc-4838-abf2-9d630f8d9bb8",
+      "at": "2026-02-03T23:40:39.124Z",
+      "userId": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "type": "task-created",
+      "message": "New task assigned: New task to check Notification",
+      "read": true
+    },
+    {
+      "id": "03c93849-22cf-49cb-9ba8-218b8f8e2130",
+      "at": "2026-02-03T23:49:15.325Z",
+      "userId": "69b2d44a-815a-4d52-ba9a-634524a19d27",
+      "type": "task-created",
+      "message": "New task assigned: Again, notification issue",
+      "read": true
+    },
+    {
+      "id": "4989b18e-7b01-4812-84e9-a9c311d7d5a9",
+      "at": "2026-02-04T02:59:11.525Z",
+      "userId": "13fba763-53b4-493d-b176-a54a0070593f",
+      "type": "task-assigned",
+      "message": "New task assigned: New Task for Assignment",
+      "read": true
+    },
+    {
+      "id": "432ea2b7-07ef-4119-ad91-fae289ee4097",
+      "at": "2026-02-04T03:02:54.220Z",
+      "userId": "13fba763-53b4-493d-b176-a54a0070593f",
+      "type": "task-status",
+      "message": "Task \"New Task for Assignment\" status: failed",
+      "read": true
     }
   ]
 }

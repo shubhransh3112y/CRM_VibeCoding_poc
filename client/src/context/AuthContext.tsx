@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000'
 
-type User = { id: string; email: string; role: string; name: string } | null
+type User = { id: string; email: string; role: string; name: string; firstName?: string; lastName?: string; avatar?: any } | null
 
 const AuthContext = createContext<any>(null)
 
@@ -37,8 +37,10 @@ export const AuthProvider = ({ children }: any) => {
     setUser(null)
   }
 
+  const updateUser = (next: any) => setUser(next)
+
   return (
-    <AuthContext.Provider value={{ user, token, login, logout, API_BASE }}>
+    <AuthContext.Provider value={{ user, token, login, logout, updateUser, API_BASE }}>
       {children}
     </AuthContext.Provider>
   )
